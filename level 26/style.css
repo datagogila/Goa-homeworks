@@ -1,0 +1,37 @@
+.heading1 {
+
+color: aquamarine;
+font-family: cursive;
+
+text-transform: uppercase;
+
+}
+
+.heading2 {
+
+color: blue;
+font-family: cursive;
+
+text-transform: uppercase;
+
+}
+
+
+
+.heading3 {
+
+    color: azure;
+    font-family: cursive;
+    
+    text-transform: uppercase;
+    
+    }
+
+
+.heading4 {
+
+color: chartreuse;
+font-family: cursive;
+
+text-transform: lowercase;
+}
