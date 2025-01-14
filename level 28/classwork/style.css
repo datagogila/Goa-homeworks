@@ -1,0 +1,31 @@
+.div1 {
+
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: lightblue;
+    position: absolute
+
+
+}
+
+.div2 {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: lightblue;
+    position: absolute;
+}
+
+.div1 {
+    top: 200px;
+    left: 300px;
+    bottom: 50px;
+}
+
+.div2 {
+    top: 400px;  
+    left: 100px; 
+    bottom: 100px; }

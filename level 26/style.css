@@ -1,4 +1,4 @@
-.heading1 {
+.heading-1 {
 
 color: aquamarine;
 font-family: cursive;
@@ -7,7 +7,7 @@ text-transform: uppercase;
 
 }
 
-.heading2 {
+.heading-2 {
 
 color: blue;
 font-family: cursive;
@@ -18,7 +18,7 @@ text-transform: uppercase;
 
 
 
-.heading3 {
+.heading-3 {
 
     color: azure;
     font-family: cursive;
@@ -28,10 +28,318 @@ text-transform: uppercase;
     }
 
 
-.heading4 {
+.heading-4 {
 
 color: chartreuse;
 font-family: cursive;
 
 text-transform: lowercase;
 }
+
+.heading-5 {
+
+    color: lime;
+    font-family: cursive;
+    
+    text-transform:lowercase;
+    
+    }
+
+
+        .heading-6 {
+
+        color: blue;
+        font-family: cursive;
+        
+        text-transform: lowercase;
+        
+        }
+
+        .heading-7 {
+
+            color: blue;
+            font-family: cursive;
+            
+            text-transform: capitalize;
+            
+        }
+            
+         
+        .heading-8 {
+
+            color:darkgoldenrod;
+            font-family: cursive;
+            
+            text-transform: capitalize;
+            
+        }
+
+
+
+        .heading-9 {
+
+            color:grey;
+            font-family: cursive;
+            
+            text-transform: capitalize;
+            
+        }
+
+
+
+        .heading-10 {
+
+         color: red;
+         font-family: cursive;
+
+         text-decoration: overline;
+
+        }
+
+
+
+        .heading-11 {
+
+        color: blueviolet;
+        font-family: cursive;
+
+        text-decoration: overline;
+
+        }
+
+
+
+        
+        .heading-12 {
+
+            color: blueviolet;
+            font-family: cursive;
+    
+            text-decoration: overline;
+    
+            }
+
+
+            .heading-13 {
+
+             color: blanchedalmond;
+             font-family: cursive;
+
+             text-decoration: underline;
+
+            }
+
+
+            .heading-14 {
+
+                color: blanchedalmond;
+                font-family: cursive;
+   
+                text-decoration: underline;
+   
+            }
+
+               
+             .heading-15 {
+
+            color: aqua;
+            font-family: cursive;
+
+            text-decoration: underline ;
+
+             }
+
+
+             .heading-16 {
+
+                color: aqua;
+                font-family: cursive;
+    
+                text-decoration: line-through;
+    
+                 }
+
+
+                 
+             .heading-17 {
+
+                color: aqua;
+                font-family: cursive;
+    
+                text-decoration: line-through;
+             }
+
+
+
+             
+             .heading-18 {
+
+                color: aqua;
+                font-family: cursive;
+    
+                text-decoration: line-through;
+    
+                 }
+
+
+
+                  
+             .heading-19 {
+
+                color: aqua;
+                font-family: cursive;
+
+                text-decoration: underline;
+                text-decoration:none;
+    
+                 }
+
+
+                 .heading-20 {
+
+                    color: aqua;
+                    font-family: cursive;
+    
+                    text-decoration: underline;
+                    text-decoration:none;
+        
+                     }
+
+
+                     .heading-21 {
+
+                        color: aqua;
+                        font-family: cursive;
+        
+                        text-decoration: underline;
+                        text-decoration:none;
+            
+                         }
+
+
+
+                    .heading-22 {
+
+                    color: beige;
+                    font-family: cursive;
+                    
+                    text-align: left;
+
+                    }
+
+
+                    .heading-23 {
+
+                        color: beige;
+                        font-family: cursive;
+                        
+                        text-align: left;
+    
+                        }
+
+
+                        .heading-24 {
+
+                            color:royalblue;
+                            font-family: cursive;
+                            
+                            text-align: left;
+        
+                            }
+
+
+                            
+                        .heading-25 {
+
+                            color:royalblue;
+                            font-family: cursive;
+                            
+                            text-align:right;
+        
+                            }
+
+
+                            
+                        .heading-26 {
+
+                            color:royalblue;
+                            font-family: cursive;
+                            
+                            text-align:right;
+        
+                            }
+
+
+
+                            
+                        .heading-27 {
+
+                            color:royalblue;
+                            font-family: cursive;
+                            
+                            text-align:right;
+        
+                            }
+
+
+                            
+                        .heading-28 {
+
+                            color:royalblue;
+                            font-family: cursive;
+                            
+                            text-align:center;
+        
+                            }
+
+
+                            
+                        .heading-29 {
+
+                            color:royalblue;
+                            font-family: cursive;
+                            
+                            text-align:center;
+        
+                            }
+
+                            
+                            
+                        .heading-30 {
+
+                            color:royalblue;
+                            font-family: cursive;
+                            
+                            text-align:center;
+        
+                            }
+
+                        
+                            
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+
+
+
+                
+
+
+
+
+
+             
+               
+
+
