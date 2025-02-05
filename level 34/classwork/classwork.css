@@ -1,0 +1,8 @@
+tr:nth-child(1){
+ background-color: fuchsia;
+}
+
+table:nth-child(2){
+    background-color: yellowgreen;
+}
+

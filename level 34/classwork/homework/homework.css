@@ -1,0 +1,39 @@
+tr:nth-child(1){
+    background-color: dimgrey;
+}
+
+tr:nth-child(2){
+    background-color: cyan;
+}
+
+tr:nth-child(3){
+    background-color: greenyellow;
+}
+
+tr:nth-child(4){
+    background-color: yellow;
+}
+
+tr:nth-child(5){
+    background-color: red;
+}
+
+tr:nth-child(6){
+    background-color: aquamarine;
+}
+
+
+table{
+    width: 50%;
+    border-collapse: collapse;
+}
+
+
+tr:nth-child(7) {
+    background-color: midnightblue;
+}
+
+
+tr:nth-child(8) {
+    background-color: midnightblue;
+}
