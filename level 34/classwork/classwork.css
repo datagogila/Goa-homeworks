@@ -6,3 +6,37 @@ table:nth-child(2){
     background-color: yellowgreen;
 }
 
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+button:hover {
+    background-color: blue;
+    color: white;
+}
+
+input:focus {
+    border: 2px solid green;
+    outline: none;
+}
+textarea:focus {
+    box-shadow: 0 0 5px rgba(0, 128, 255, 0.7);
+}
+
+
+li:nth-child(2n) {
+    background-color: lightgray;
+}
+tr:nth-child(3n) {
+    background-color: #e0f7fa;
+}
+
+
+p:first-child {
+    font-weight: bold;
+}
+ul li:last-child {
+    color: red;
+}
+
+

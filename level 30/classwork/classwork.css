@@ -5,3 +5,31 @@ font-family: cursive;
 text-align: center;
 
 }
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+.container {
+    display: grid;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+.card {
+    border: 2px solid red;
+    padding: 10px;
+    text-align: center;
+    background: white;
+}
+.flag {
+    width: 100px;
+    height: 60px;
+    display: block;
+    margin: 10px auto;
+}

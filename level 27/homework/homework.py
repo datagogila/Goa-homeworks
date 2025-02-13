@@ -1,9 +1,27 @@
+def get_name():
+    name = input("What's your name? ")
+    if name:  # checks if the input is not empty
+        return f"Hello, {name}!"
+    else:
+        return "You didn't enter a name!"
+
+
 def is_even(n): 
     if isinstance(n, float) and n % 1 != 0:
         return False  
     return n % 2 == 0  
 
-    pass
+def main(verb, noun):
+    if verb == "run":
+        print(f"The {noun} is running!")
+    else:
+        print(f"The {noun} will {verb} soon.")
+
+def check_number(num):
+    if num % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
 
 
 def number_to_string(num):

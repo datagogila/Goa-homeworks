@@ -15,3 +15,37 @@ print(formatted_string)
 words = ["apple", "banana", "cherry"]
 fruit_string = " ".join(words)
 print(fruit_string)
+
+
+
+#Task 4: Splitting a String
+#Create a string named sentence with the following content: "The quick brown fox jumps over the lazy dog."
+#Use the split() function to split the sentence into a list of words. Store the result in a variable named words_list and print it
+# Create the sentence string
+sentence = "The quick brown fox jumps over the lazy dog."
+
+words_list = sentence.split()
+
+print(words_list)
+
+#Task 5: Converting to Lowercase
+#Create a string named mixed_case with the following content: "PyThOn Is AwEsOmE!"
+#Use the lower() function to convert the entire string to lowercase. Store the result in a variable named lowercase_string and print it.
+# Create the mixed_case string
+mixed_case = "PyThOn Is AwEsOmE!"
+
+# Convert the string to lowercase
+lowercase_string = mixed_case.lower()
+
+# Print the result
+print(lowercase_string)
+
+#Task 6: Converting to Uppercase
+#Create a string named greeting with the following content: "good morning"
+#Use the upper() function to convert the entire string to uppercase. Store the result in a variable named uppercase_greeting and print it.
+# Create the greeting string
+greeting = "good morning"
+
+uppercase_greeting = greeting.upper()
+
+print(uppercase_greeting)
