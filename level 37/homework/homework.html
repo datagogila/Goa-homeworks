@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+    
+        .section {
+            padding: 80px 20px;
+            min-height: 200px;
+        }
+        
+        .static-section {
+            position: static;
+            background: lightgray;
+        }
+        
+        
+        .relative-section {
+            position: relative;
+            background: lightblue;
+            top: 20px;
+            left: 30px;
+        }
+        
+        
+        .absolute-container {
+            position: relative;
+            background: lightgreen;
+            padding: 50px;
+        }
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: darkgreen;
+            color: white;
+            padding: 10px;
+        }
+        
+    
+        .sticky-section {
+            background: lightcoral;
+            min-height: 300px;
+        }
+        .sticky-box {
+            position: sticky;
+            top: 10px;
+            background: darkred;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ვებგვერდის სათაური</h1>
+        <nav>
+            <ul>
+                <li> მთავარი</li>
+                <li> ჩვენს შესახებ</li>
+                <li> კონტაქტი</li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="section static-section">
+        <h2>Static პოზიცია</h2>
+    </div>
+    
+    <div class="section relative-section">
+        <h2>Relative პოზიცია</h2>
+    </div>
+    
+    <div class="section absolute-container">
+        <h2>Absolute პოზიცია</h2>
+        <div class="absolute-box"></div>
+    </div>
+    
+    <div class="section sticky-section">
+        <h2>Sticky პოზიცია</h2>
+        <div class="sticky-box"></div>
+    </div>
+    
+</body>
+</html>

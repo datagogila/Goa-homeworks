@@ -8,3 +8,26 @@
 
 
 
+def guess_number():
+    print("მოიფიქრე რიცხვი 1-დან 100-მდე და მე ვცდი მის გამოცნობას!")
+    low, high = 1, 100
+    attempts = 3
+    
+    for _ in range(attempts):
+        guess = (low + high) // 2  
+        print(f"ჩემი გამოცნობა: {guess}")
+        feedback = input("თუ მაღალია, აკრიფე 'მაღალი', თუ დაბალია 'დაბალი', თუ სწორია 'სწორია': ")
+        
+        if feedback == "სწორია":
+            print("გილოცავ! მე გამოვიცანი შენი რიცხვი!")
+            break
+        elif feedback == "მაღალი":
+            high = guess - 1
+        elif feedback == "დაბალი":
+            low = guess + 1
+        else:
+            print("გთხოვ, შეიყვანე მხოლოდ 'მაღალი', 'დაბალი' ან 'სწორია'.")
+    else:
+        print("სამწუხაროდ, ვერ გამოვიცანი შენი რიცხვი სამ მცდელობაში.")
+
+guess_number()
