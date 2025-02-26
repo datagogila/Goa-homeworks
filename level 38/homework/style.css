@@ -9,9 +9,9 @@ font-size: 2em;
 color: aliceblue;
 font-family: cursive;
 text-align: center;
-
 display: block;
 }
+
 
 
 div {
@@ -125,3 +125,23 @@ font-family: cursive;
 text-align: center;
 display:inline-block;
 }
+
+
+p {
+    -webkit-text-emphasis: filled dot red; 
+    text-emphasis: filled dot red;
+  }
+
+  .blur-box {
+    -webkit-backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  span {
+    -webkit-box-decoration-break: clone; 
+    box-decoration-break: clone;
+    background: yellow;
+    padding: 5px;
+  }
+  

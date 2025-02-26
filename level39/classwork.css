@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 150px;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+.div1 {
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+}
+.div1:hover {
+    transform: translate(20px, 20px) 
+}
+
+
+* {
+    padding: 0;
+    margin: 150px;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+.div1 {
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+.div1:hover {
+    transform: rotate(45deg)
+}
+
+* {
+    padding: 0;
+    margin: 150px;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+.div1 {
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+.div1:hover {
+    transform: scale(1.2)
+}
+
+
+* {
+    padding: 0;
+    margin: 150px;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+.div1 {
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+.div1:hover {
+    transform: skew(120deg)
+}
+
+* {
+    padding: 0;
+    margin: 150px;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+.div1 {
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+.div1:hover {
+    transform: rotate(720deg) translate(250px,250px) scale(1.5) skew(150deg, 150deg); 
+}
