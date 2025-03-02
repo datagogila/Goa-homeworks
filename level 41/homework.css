@@ -1,0 +1,79 @@
+* {
+    padding: 0%;
+    margin: 150px;
+    box-sizing:border-box ;
+    font-family:cursive;
+}
+
+.div1{
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    color: blue;
+    font-size: 2em;
+    text-align: center;
+    font-family: cursive;
+    border: 0px solid lack;
+
+
+    animation-name: movingElem;
+    animation-duration:5sec ;
+}
+
+
+@keyframes movingElem {
+
+ 100% {
+     transform: translateX(0);
+     background-color:red
+ }
+}
+
+
+
+
+
+
+* {
+    padding: 0%;
+    margin:160px;
+    box-sizing: border-box;
+    font-family: cursive;
+
+}
+
+.div2 {
+    height: 150px;
+    width: 150px;
+    background-color: aquamarine;
+    color: antiquewhite;
+    font-size: 2em;
+    text-align: center;
+    font-family: cursive;
+    border: 0px solid black;
+
+    animation-name: div;
+    animation-duration: 10s;
+
+}
+
+
+
+@keyframes div {
+0% {
+    transform: translateX(0px);
+}
+25% {
+    transform: translateX(400px);
+}
+50% {
+    transform: translateY(200px);
+}
+75% {
+    transform: translateX(-400px);
+}
+100% {
+    transform: translateY(-200px);
+}
+
+}

@@ -1,0 +1,41 @@
+* {
+    padding: 0%;
+    margin: 160px;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+.css{
+   height: 50px;
+   width: 50px;
+   background-color: antiquewhite;
+   color:rebeccapurple;
+   font-size: 2em;
+   text-align: center;
+   font-family: cursive;
+   border: 1px solid black;
+
+
+   animation-name:movingElem;
+
+   animation-duration: 5sec;
+
+}
+
+
+@keyframes movingElem {
+    0% {
+        transform: translateX(0);
+        background-color: chartreuse;
+    }
+
+    50% {
+        transform: translateX(500px);
+        background-color: darkcyan;
+    }
+
+    100% {
+        transform: translateX(0);
+        background-color: cyan;
+    }
+}

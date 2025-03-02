@@ -44,6 +44,5 @@
 
 
 
-#მონაცემთა ტიპები -string, integer, float, boolean, list ....
 
-#print('hello' +'' + str(100) + '' + 'zdarova chemi zma')
+#print('hello' +'' + str(100) + '' + 'გამარჯობა')
