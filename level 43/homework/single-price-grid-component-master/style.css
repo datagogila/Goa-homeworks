@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: wheat;
+    font-family: Arial, sans-serif;
+}
+.div1 {
+    background: white;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.header1 {
+    padding: 20px;
+    text-align: center;
+}
+.header1 h2 {
+    color:green;
+}
+.header1 p {
+    color:gray;
+}
+.div2 {
+    display: flex;
+    background: lightseagreen;
+    color: white;
+    padding: 20px;
+}
+.div2 .header2 {
+    flex: 1;
+    text-align: center;
+}
+.div2 .header2 h3 {
+    font-size: 24px;
+}
+.div2 .header2 button {
+    background: gold;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.div3 .why-us {
+    flex: 1;
+    font-size: 14px;
+}

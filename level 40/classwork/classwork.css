@@ -28,9 +28,7 @@
     background-color: blue;
     border: 3px solid black;
     border-radius: 10px;
-    
     transition: all 0.5s;
-    
 }
 
 .div:hover {
@@ -38,6 +36,5 @@
     height: 200px;
     background-color: red;
     border-radius: 50%;
-
 
 }

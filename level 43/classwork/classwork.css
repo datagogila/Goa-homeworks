@@ -1,0 +1,68 @@
+*{
+    padding: 150px;
+    margin: 160px;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --padding: 20px;
+    --margin: 10px;
+    --position: relative;
+    --transition: all 0.3s ease;
+}
+
+.div1-1 {
+    color:red;
+    background-color:white;
+    font-size: 24px;
+    letter-spacing: 1px;
+    display: block;
+    padding: var(--padding);
+    margin: var(--margin);
+    position: var(--position);
+    transition: var(--transition);
+    text-align: center;
+    
+}
+
+.div1-1:hover {
+    transform: rotate(10deg);
+    background-color: firebrick;
+}
+
+.div2-2 {
+    color: hotpink;
+    background-color: lawngreen;
+    font-size: 18px;
+    letter-spacing: 2px;
+    display: inline;
+    padding: var(--padding);
+    margin: var(--margin);
+    position: var(--position);
+    transition: var(--transition);
+    text-decoration: underline;
+}
+
+.div2-2:hover {
+    transform: scale(1.2);
+    color:green; 
+}
+
+.div3-3 {
+    color: chocolate; 
+    background-color:cadetblue;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    padding: var(--padding);
+    margin: var(--margin);
+    position: var(--position);
+    transition: var(--transition);
+    border: 2px solid palegoldenrod;
+}
+
+.div3-3:hover {
+    transform: translateY(-10px);
+    background-color: blue
+}
