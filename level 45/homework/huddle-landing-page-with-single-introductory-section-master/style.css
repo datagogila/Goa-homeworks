@@ -1,0 +1,52 @@
+body {
+    font-family: cursive;
+    text-align: center;
+    background: linear-gradient(to right, #662d91, #9146ff);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.content {
+    max-width: 500px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: white;
+    color: purple;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.image img {
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+
+
