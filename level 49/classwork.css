@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+
+header {
+    max-width: 100px;
+    height: 100px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+
+header p {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 3.0 em;
+    color: aquamarine;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+image {
+    max-width: 400px;
+    border-radius: 20px;
+    border: 1px solid lawngreen;
+    text-align: center;
+
+
+}
+
+
+div{
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 2.1 em;
+    max-width: 100px;
+
+}
+
+@media (max-width:800px) {
+    header {
+        display: none;
+    }
+
+    
+}
