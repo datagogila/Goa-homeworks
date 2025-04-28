@@ -1,6 +1,19 @@
 let სახელი = prompt("შეიყვანე შენი სახელი:");
 let ასაკი = prompt("შეიყვანე შენი ასაკი:");
 
+let sum1 = Number(prompt("პირველი რიცხვი"))
+let sum2 = Number(prompt("მეორე რიცხვი"))
+let sum3 = Number(prompt("მესამე რიცხვი"))
+let sum4 = Number(prompt("მეოთხე რიცხვი"))
+let sum5 = Number(prompt("მეხუთე რიცხვი"))
+
+console.log(num1 + num2 + num3 + num4 + num5);
+console.log(num1 - num2 - num3 - num4 - num5);
+console.log(num1 * num2 * num3 * num4 * num5);
+console.log(num1 / num2 / num3 / num4 / num5);
+console.log(num1 ** 2,  num2 ** 2,  num3 ** 2,  num4 ** 2, num5 ** 2);
+console.log( num1 % num2, num3 % num4, num5 % num1);
+
 let წინადადება = "გამარჯობა, მე ვარ " + სახელი + " და მე ვარ " + ასაკი + " წლის.";
 console.log(წინადადება);
 alert(წინადადება);
