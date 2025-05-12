@@ -1,17 +1,17 @@
-let num1 = (prompt("შეიყვანეთ 1-ე რიცხვი:"));
-let num2 = (prompt("შეიყვანეთ 2-ე რიცხვი:"));
-let num3 = (prompt("შეიყვანეთ 3-ე რიცხვი:"));
-let num4 = (prompt("შეიყვანეთ 4-ე რიცხვი:"));
-let num5 = (prompt("შეიყვანეთ 5-ე რიცხვი:"));
+let num1 = Number(prompt("შეიყვანეთ 1 რიცხვი:"));
+let num2 = Number(prompt("შეიყვანეთ 2 რიცხვი:"));
+let num3 = Number(prompt("შეიყვანეთ 3 რიცხვი:"));
+let num4 = Number(prompt("შეიყვანეთ 4 რიცხვი:"));
+let num5 = Number(prompt("შეიყვანეთ 5 რიცხვი:"));
 
 
-console.log(`${num1} > ${num2}`);
-console.log(`${num1} < ${num2}`);
-console.log(`${num1} >= ${num2}`);
-console.log(`${num1} <= ${num2}`);
-console.log(`${num1} == ${num2}`);
-console.log(`${num1} != ${num2} `);
-console.log(`${num1} === ${num2}`);
+console.log(`num1 > num2`);
+console.log(`num2 < num3`);
+console.log(`num3 >= num4`);
+console.log(`num5 <= num1`);
+console.log(`num5 == num2`);
+console.log(`num5 != num3 `);
+console.log(`num5 === num4`);
 
 
 
