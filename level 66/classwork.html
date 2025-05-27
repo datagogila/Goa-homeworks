@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function flight(flightID, status) {
+    this.flightID = flightID;
+    this.status = status;
+}
+
+let flight = new Flight("NGT 929", "landed");
+
+console.log( f.flightID +  flight.status);
+
+    </script>
+
+    <script>
+        function changePrice(price, discount) {
+  return price - (price * (discount / 100));
+}
+
+let id = "LD1493";
+let price = 1700;
+let discount = 15;
+
+
+console.log(id  + price);
+let newPrice = changePrice(price, discount);
+console.log(id +  newPrice);
+
+    </script>
+</body>
+</html>

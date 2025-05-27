@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let book = {
+  title: "ვეფხისტყაოსანი",
+  author: "შოთა რუსთაველი",
+  year: 2020,
+  genre: "პოეზია",
+  price: 25.5
+};
+
+
+console.log(book);
+
+
+console.log(book.title);        
+console.log(book["author"]);    
+console.log(book.year);         
+console.log(book["genre"]);     
+console.log(book.price);      
+let sentence = `წიგნი "${book.title}", რომელიც დაწერა ${book.author}-მა, გამოქვეყნდა ${book.year} წელს. ეს არის ${book.genre}-ის ჟანრის და ღირს ${book.price} ლარი.`;
+
+console.log(sentence);
+
+</script>
+</body>
+</html>
