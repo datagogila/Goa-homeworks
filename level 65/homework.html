@@ -24,9 +24,30 @@ console.log(book["author"]);
 console.log(book.year);         
 console.log(book["genre"]);     
 console.log(book.price);      
-let sentence = `წიგნი "${book.title}", რომელიც დაწერა ${book.author}-მა, გამოქვეყნდა ${book.year} წელს. ეს არის ${book.genre}-ის ჟანრის და ღირს ${book.price} ლარი.`;
+let sentence = ` "${book.title}",  ${book.author} ${book.year}  ${book.genre}  ${book.price} `;
 
 console.log(sentence);
+
+const student = {
+  name: "დათა გოგილაშვილი",
+  age: 19,
+  faculty: "კომპიუტერული მეცნიერება",
+  course: 2,
+  averageGrade: 91.
+};
+
+console.log(student);
+
+console.log(student.name);            
+console.log(student["age"]);          
+console.log(student.faculty);         
+console.log(student["course"]);      
+console.log(student.averageGrade);  
+
+const sentence = ` ${student.name} ${student.age} ${student.faculty} ${student.course}  ${student.averageGrade}.`;
+
+console.log(sentence);
+
 
 </script>
 </body>

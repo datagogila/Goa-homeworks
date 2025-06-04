@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <SCript>
+        function Person(name, age, profession) {
+  this.name = name;
+  this.age = age;
+  this.profession = profession;
+}
+
+const person1 = new Person("Anna", 30, "developer");
+console.log(person1.name);       
+console.log(person1.age);        
+console.log(person1.profession);
+
+
+function Book(title, author, year) {
+  this.title = title;
+  this.author = author;
+  this.year = year;
+}
+
+
+Book.prototype.getSummary = function() {
+  return `${this.title} by ${this.author}, published in ${this.year}`;
+};
+
+const book1 = new Book("1984", "George Orwell", 1949);
+const book2 = new Book("To Kill a Mockingbird", "Harper Lee", 1960);
+const book3 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925);
+
+console.log(book1);
+console.log(book2);
+console.log(book3);
+
+
+function User(username, email, password) {
+  this.username = username;
+  this.email = email;
+  this.password = password;
+}
+
+User.prototype.changePassword = function(newPassword) {
+  this.password = newPassword;
+};
+
+User.prototype.getDetails = function() {
+  return {
+    username: this.username,
+    email: this.email
+  };
+};
+
+const user1 = new User("mari_01", "mari@gmail.com", "pass123");
+
+user1.changePassword("newpass456");
+
+
+console.log(user1);
+
+    </SCript>
+
+
+</body>
+</html>
