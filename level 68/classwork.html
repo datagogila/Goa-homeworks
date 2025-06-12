@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+const socialLink = {
+  reviews: {
+    user1: {
+      name: "ანა",
+      status: "parent",
+      review: "ძალიან კმაყოფილი ვარ მომსახურებით."
+    },
+    user2: {
+      name: "ლუკა",
+      status: "child",
+      review: "ძალიან მომეწონა გარემო და მომსახურება."
+    },
+    user3: {
+      name: "მარიამი",
+      status: "parent",
+      review: "კარგი გამოცდილება მქონდა, რეკომენდაციას ვუწევ."
+    }
+  }
+};
+
+console.log(Object.entries(socialLink));
+
+console.log(Object.keys(socialLink));
+
+
+console.log(Object.values(socialLink));
+
+console.log(socialLink.hasOwnProperty("reviews")); 
+
+const newObj = {
+  member: "Gold"
+};
+
+const mergedObject = Object.assign({}, socialLink, newObj);
+
+console.log(mergedObject);
+
+Object.freeze(socialLink);
+
+console.log(Object.isFrozen(socialLink)); 
+    </script>
+</body>
+</html>

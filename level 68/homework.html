@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. უნივერსიტეტის ობიექტის შექმნა
+const university = {
+  name: "თბილისის სახელმწიფო უნივერსიტეტი",
+  departments: 10,
+  website: "https://www.tsu.ge",
+  ratings: {
+    student1: {
+      name: "ანა",
+      review: "ძალიან კარგი პროფესორები და სწავლების ხარისხი.",
+      year: 2
+    },
+    student2: {
+      name: "გიორგი",
+      review: "კარგი გარემოა სასწავლებლად.",
+      year: 3
+    },
+    student3: {
+      name: "მარიამი",
+      review: "შესანიშნავი ლაბორატორიები და პრაქტიკული კურსები.",
+      year: 1
+    }
+  }
+};
+
+
+console.log(Object.entries(university));
+
+console.log(university.hasOwnProperty("scholarship"));
+
+const additionalData = {
+  studentsCount: 20000
+};
+
+const updatedUniversity = Object.assign({}, university, additionalData);
+
+console.log(updatedUniversity);
+
+Object.freeze(university);
+
+
+university.name = "ახალი უნივერსიტეტი";
+university.departments = 5;
+
+
+console.log(university); 
+
+
+console.log(Object.isFrozen(university)); 
+
+
+
+const sportsClub = {
+  clubName: "დინამო თბილისი",
+  sportType: "ფეხბურთი",
+  foundedYear: 1925,
+  achievements: {
+    title1: {
+      name: "საბჭოთა კავშირის ჩემპიონი",
+      year: 1964
+    },
+    title2: {
+      name: "საქართველოს ეროვნული ჩემპიონი",
+      year: 1990
+    },
+    title3: {
+      name: "UEFA თასი",
+      year: 1981
+    }
+  }
+};
+
+console.log(Object.keys(sportsClub));
+
+
+console.log(Object.values(sportsClub));
+
+
+console.log(sportsClub.hasOwnProperty("sponsors")); 
+
+
+const stadiumInfo = {
+  stadiumCapacity: 54000
+};
+
+const updatedClub = Object.assign({}, sportsClub, stadiumInfo);
+
+console.log(updatedClub);
+
+Object.freeze(sportsClub);
+
+
+sportsClub.clubName = "ახალი კლუბი";
+sportsClub.foundedYear = 2000;
+
+
+console.log(sportsClub);
+
+console.log(Object.isFrozen(sportsClub)); 
+
+
+const hotel = {
+  hotelName: "ZP hotel",
+  stars: 5,
+  location: "თბილისი, საქართველო",
+  guestReviews: {
+    guest1: {
+      name: "ნინო",
+      review: "ძალიან სუფთა და მყუდრო ოთახები!",
+      stayedNights: 3
+    },
+    guest2: {
+      name: "დავითი",
+      review: "პერსონალი იყო მეგობრული და სწრაფი.",
+      stayedNights: 2
+    },
+    guest3: {
+      name: "ეკატერინე",
+      review: "მომსახურება იყო მაღალ დონეზე, აუცილებლად დავბრუნდები.",
+      stayedNights: 5
+    }
+  }
+};
+
+console.log(Object.entries(hotel));
+
+
+console.log(hotel.hasOwnProperty("spa"));
+
+
+const roomInfo = {
+  roomsCount: 120
+};
+
+const updatedHotel = Object.assign({}, hotel, roomInfo);
+
+console.log(updatedHotel);
+
+
+Object.freeze(hotel);
+
+
+hotel.stars = 3;
+hotel.location = "თბილისი";
+
+
+console.log(hotel); 
+
+console.log(Object.isFrozen(hotel)); 
+
+
+
+const cinema = {
+  cinemaName: "კინო თბილისი",
+  moviesCount: 12,
+  location: "თბილისი, საქართველო",
+  movieReviews: {
+    user1: {
+      name: "ლაშა",
+      review: "საუკეთესო ეკრანი და ხმა!",
+      rating: 5
+    },
+    user2: {
+      name: "ნატა",
+      review: "კომფორტული სავარძლები და კარგი ფილმები.",
+      rating: 4
+    },
+    user3: {
+      name: "გიორგი",
+      review: "ფასები ცოტათი მაღალია, მაგრამ გამოცდილება კარგი იყო.",
+      rating: 3
+    }
+  }
+};
+
+
+console.log(Object.entries(cinema));
+
+
+console.log(cinema.hasOwnProperty("vipSeats"));
+
+const priceInfo = {
+  ticketPrice: 15
+};
+
+const updatedCinema = Object.assign({}, cinema, priceInfo);
+
+console.log(updatedCinema);
+
+
+Object.freeze(cinema);
+
+
+cinema.moviesCount = 5;
+cinema.location = "ბათუმი";
+
+console.log(cinema); 
+
+
+console.log(Object.isFrozen(cinema));
+
+    </script>
+</body>
+</html>

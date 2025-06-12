@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countElements(arr) {
+  return arr.length;
+}
+
+function concatenateArrays(arr1, arr2) {
+  return arr1.concat(arr2);
+}
+
+function addToEnd(arr, value) {
+  return arr.push(value);
+}
+
+function removeLastElement(arr) {
+  return arr.pop();
+}
+
+
+function concatAndPush(arr1, arr2, value) {
+  const combined = arr1.concat(arr2);
+  combined.push(value);
+  return combined;
+}
+
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+function evenIndexedElements(arr) {
+  const result = [];
+  for (let i = 0; i < arr.length; i += 2) {
+    result.push(arr[i]);
+  }
+  return result;
+}
+
+function stringLengths(arr) {
+  const lengths = [];
+  for (let i = 0; i < arr.length; i++) {
+    lengths.push(arr[i].length);
+  }
+  return lengths;
+}
+
+    </script>
+</body>
+</html>
