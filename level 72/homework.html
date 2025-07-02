@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+               //python
+ //       def is_leap_year(year):
+  //  if year % 4 == 0:
+     //   if year % 100 == 0:
+         //   if year % 400 == 0:
+         //       return True
+        //    else:
+          //      return False
+      //  else:
+    //        return True
+  //  else:
+     //  return False
+
+     //js
+     function isLeapYear(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return true;
+    }
+  } else {
+    return false;
+  }
+}
+
+function fizzBuzzList(numbers) {
+  const result = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    const num = numbers[i];
+
+    if (num % 3 === 0 && num % 5 === 0) {
+      result.push("FizzBuzz");
+    } else if (num % 3 === 0) {
+      result.push("Fizz");
+    } else if (num % 5 === 0) {
+      result.push("Buzz");
+    }
+  }
+
+  return result;
+}
+    </script>
+</body>
+</html>

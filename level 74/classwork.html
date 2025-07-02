@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function past(h, m, s) {
+  const milliseconds = (h * 3600 + m * 60 + s) * 1000;
+  return milliseconds;
+}
+
+function grow(arr) {
+  let result = 1;
+
+  for (let i = 0; i < arr.length; i++) {
+    result = result * arr[i];
+  }
+
+  return result;
+}
+
+function countPositivesSumNegatives(arr) {
+  if (input== 0 ,input.length < 1 ) return [];
+
+  let poscount = 0;
+  let negsum = 0;
+
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] > 0) {
+      poscount++;
+    } else if (arr[i]) {
+      negsum += arr[i];
+    }
+  }
+
+  return [poscount, negsum];
+}
+    </script>
+</body>
+</html>
