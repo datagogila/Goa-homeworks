@@ -2,23 +2,20 @@
 <html lang="ka">
 <head>
   <meta charset="UTF-8">
-  <title>Div ზომის კონტროლი</title>
+  <title>documment</title>
   <style>
-    /* საწყისი სტილი დივისთვის */
-    #myBox {
+    .myBox {
       width: 100px;
       height: 100px;
       background-color: lightblue;
       transition: 0.3s ease;
     }
 
-    /* გაზრდილი კლასი */
     .big {
       width: 200px;
       height: 200px;
     }
 
-    /* შემცირებული კლასი */
     .small {
       width: 50px;
       height: 50px;
@@ -31,29 +28,20 @@
 </head>
 <body>
 
-  <h3>🔼 გაზრდა</h3>
+    <script src="class.js"></script>
+<!--1-->
+  <h3> გაზრდა</h3>
   <button id="increaseBtn">ზომის გაზრდა</button>
 
-  <h3>🔽 შემცირება</h3>
+  <h3> შემცირება</h3>
   <button id="decreaseBtn">ზომის შემცირება</button>
 
   <br><br>
 
   <div id="myBox"></div>
 
-  <script>
-    const box = document.getElementById("myBox");
+<!--2-->
 
-    document.getElementById("increaseBtn").onclick = () => {
-      box.classList.remove("small");
-      box.classList.add("big");
-    };
-
-    document.getElementById("decreaseBtn").onclick = () => {
-      box.classList.remove("big");
-      box.classList.add("small");
-    };
-  </script>
-
+<img src="https://www.crystalsport.ge/uploads/news/75804/small_3c80d0292cdbc05d1085cc864d5cf61b.webp" alt="">
 </body>
 </html>

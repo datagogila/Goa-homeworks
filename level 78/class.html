@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>documment</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: c;
+      margin-top: 50px;
+    }
+    #image-box {
+      width: 400px;
+      height: 250px;
+      border: 2px solid #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #eee;
+      margin-bottom: 30px;
+    }
+    #image-box img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="image-box">
+    <img id="img" src="https://www.epitech-it.es/wp-content/uploads/2022/07/danial-igdery-FCHlYvR5gJI-unsplash.jpg" alt="">
+    <img src="https://www.bing.com/ck/a?!&&p=9973e59756adf03dc2480cb9b778242fcbe926664fa1c03691ef060a06bc8248JmltdHM9MTc1NTU2MTYwMA&ptn=3&ver=2&hsh=4&fclid=357cc558-4cfb-6096-27e9-d04d4d6261e1&u=a1L2ltYWdlcy9zZWFyY2g_cT1ncmFwaGljYWwlMjBkZXNpZ25lciZGT1JNPUlRRlJCQSZpZD0wQThEQzEzMUY1MTM3MTBGMkM1RjM4REUxNkNENkE4NTE4QkE4NkRD&ntb=1" alt="">
+    <img src="https://www.bing.com/ck/a?!&&p=b6ff6d9487333a480812917233f266fafa27894c820432911dae466c1c45cef7JmltdHM9MTc1NTU2MTYwMA&ptn=3&ver=2&hsh=4&fclid=357cc558-4cfb-6096-27e9-d04d4d6261e1&u=a1L2ltYWdlcy9zZWFyY2g_Rk9STT1JQVJSVEgmcT1tZWNoYW5pYyZpZD1PU0suSEVSTzkyc3NzU28xbVl3M2xsdzJxVDZ3Si1udFRrNnk0eWFDOHRKX0hRN0t2WE0&ntb=1" alt="">
+  </div>
+
+  <div class="buttons">
+    <button onclick="show('https://www.epitech-it.es/wp-content/uploads/2022/07/danial-igdery-FCHlYvR5gJI-unsplash.jpg')">Programmer</button>
+    <button onclick="show('https://www.bing.com/ck/a?!&&p=9973e59756adf03dc2480cb9b778242fcbe926664fa1c03691ef060a06bc8248JmltdHM9MTc1NTU2MTYwMA&ptn=3&ver=2&hsh=4&fclid=357cc558-4cfb-6096-27e9-d04d4d6261e1&u=a1L2ltYWdlcy9zZWFyY2g_cT1ncmFwaGljYWwlMjBkZXNpZ25lciZGT1JNPUlRRlJCQSZpZD0wQThEQzEzMUY1MTM3MTBGMkM1RjM4REUxNkNENkE4NTE4QkE4NkRD&ntb=1')">Graphical Designer</button>
+    <button onclick="show('https://www.bing.com/ck/a?!&&p=b6ff6d9487333a480812917233f266fafa27894c820432911dae466c1c45cef7JmltdHM9MTc1NTU2MTYwMA&ptn=3&ver=2&hsh=4&fclid=357cc558-4cfb-6096-27e9-d04d4d6261e1&u=a1L2ltYWdlcy9zZWFyY2g_Rk9STT1JQVJSVEgmcT1tZWNoYW5pYyZpZD1PU0suSEVSTzkyc3NzU28xbVl3M2xsdzJxVDZ3Si1udFRrNnk0eWFDOHRKX0hRN0t2WE0&ntb=1')">Mechanic</button>
+  </div>
+
+  <script>
+    function show(url) {
+      let img = document.getElementById("img");
+      img.src = url;
+      img.alt = "სურათი";
+    }
+  </script>
+</body>
+</html>
