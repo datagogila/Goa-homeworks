@@ -57,3 +57,36 @@ function squareDigits(num) {
     }
     return n;
   }
+
+  function highAndLow(numbers) {
+    let nums = numbers.split(" ").map(Number);
+    
+    let max = nums[0];
+    let min = nums[0];
+    
+    for (let i = 1; i < nums.length; i++) {
+      if (nums[i] > max) {
+        max = nums[i];
+      }
+      if (nums[i] < min) {
+        min = nums[i];
+      }
+    }
+    
+    return max + " " + min;
+  }
+
+
+  function isIsogram(str) {
+    str = str.toLowerCase();
+  
+    for (let i = 0; i < str.length; i++) {
+      for (let j = i + 1; j < str.length; j++) {
+        if (str[i] === str[j]) {
+          return false; 
+        }
+      }
+    }
+  
+    return true;
+  }
