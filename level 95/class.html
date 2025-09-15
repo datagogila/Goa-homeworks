@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <SCript src="CLASS.JS"></SCript>
+    <script>
+
+console.log("ლომიიიიი")
+
+fetch("https://jsonplaceholder.typicode.com/todos/1") 
+  .then(response => response.json())
+  .then(data => {
+    console.log("მიღებული მონაცემები:", data);
+  })
+  .then(error => {
+    console.error("შეცდომა:", error);
+  });
+
+console.log("ლომიიიიი"); 
+
+
+
+function asyncPromiseFunction(subject) {
+            return new Promise((resolve, reject) => {
+                if (subject  === "")
+                    reject(Error("Nothing"));
+                setTimeout(function () {
+                    resolve(subject1);
+                }, 1000);
+            })
+        }
+
+        asyncPromiseFunction("subject 1")
+            .then((result) => {
+                console.log("mgeli")
+            })
+            .catch((err) => {
+                console.log(error)
+            })
+            .finally(() => {
+    console.log("ლომის დასასრული ");
+  });
+
+
+
+
+    </script>
+
+<h1>ამინდის ინფორმაცია ლომზე</h1>
+<div id="weather"></div>
+</body>
+</html>

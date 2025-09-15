@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="home.js"></script>
+    <p>ქალაქი: ${data.name}</p>
+    <p>ტემპერატურა: ${data.main.temp}°C</p>
+    <p>ამინდის მდგომარეობა: ${data.weather[0].description}</p>
+
+    <form id="myForm">
+        <label for="name">სახელი:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">გაგზავნა</button>
+      </form>
+
+
+  <h1>ამინდის ინფორმაცია</h1>
+  <div id="weather"></div>
+
+
+  
+  <button id="loadBtn">მონაცემების წამოღება</button>
+  <div id="weatherlist"></div>
+</body>
+</html>

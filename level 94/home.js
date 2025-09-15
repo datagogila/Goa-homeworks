@@ -1,3 +1,4 @@
+//1
 function sayHello() {
   console.log("Hello");
 }
@@ -9,7 +10,7 @@ function sayWorld() {
 sayHello();
 sayWorld();
 
-
+//2
 function firstAsync() {
   setTimeout(() => {
     console.log("First async done");
@@ -25,7 +26,7 @@ function secondAsync() {
 firstAsync();
 secondAsync();
 
-
+//3
 console.log("Start program");
 
 setTimeout(() => {
@@ -37,3 +38,30 @@ setTimeout(() => {
 }, 2000);
 
 console.log("End program");
+
+//4
+setTimeout(() => {
+  console.log("Async 500ms done");
+}, 500);
+
+setTimeout(() => {
+  console.log("Async 1500ms done");
+}, 1500);
+
+setTimeout(() => {
+  console.log("Async 2000ms done");
+}, 2000);
+
+
+//5
+console.log("User logged in"); 
+
+setTimeout(() => {
+  console.log("Fetching data...");
+}, 2000); 
+
+setTimeout(() => {
+  console.log("Data received");
+}, 1000); 
+
+
