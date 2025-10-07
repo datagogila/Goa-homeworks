@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Features Grid</title>
+  <style>
+    :root{
+    --gap: 32px;
+    --max-width: 1000px;
+    --circle-size: 56px;
+    --font: "Arial", sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    font-family: var(--font);
+    margin: 0;
+    padding: 40px 16px;
+    display:flex;
+    justify-content:center;
+    background: #fff;
+    color: #111;
+  }
+
+  .container{
+    width: 100%;
+    max-width: var(--max-width);
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    align-items: start;
+    justify-items: center;
+  }
+
+  .feature {
+    text-align: center;
+    width: 100%;
+    max-width: 260px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .icon {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    flex-shrink: 0;
+  }
+
+  .label {
+    font-weight: 700;
+    line-height: 1.1;
+    font-size: 15px;
+  }
+
+  .sub {
+    font-weight: 600;
+    font-size: 13px;
+    opacity: 0.95;
+  }
+
+  .c1{ background: #30f0e8; } 
+  .c2{ background: #22c6b3; }
+  .c3{ background: #0da3c7; }
+  .c4{ background: #c8845f; }
+  .c5{ background: #f1574c; }
+  .c6{ background: #cfa2ff; }
+
+
+  @media (max-width: 880px){
+    .features{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    :root{ --circle-size: 52px; }
+  }
+
+  @media (max-width: 520px){
+    .features{
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .feature{
+      max-width: 420px;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      text-align: left;
+      padding: 6px 4px;
+    }
+    .label{ font-size: 15px; }
+    .sub{ font-size: 13px; }
+    :root{ --circle-size: 46px; }
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="features" role="list">
+      <div class="feature" role="listitem">
+        <div class="icon c1" aria-hidden="true"></div>
+        <div>
+          <div class="label">Written by locals</div>
+          <div class="sub">Brief subtitle</div>
+        </div>
+      </div>
+
+      <div class="feature" role="listitem">
+        <div class="icon c2" aria-hidden="true"></div>
+        <div>
+          <div class="label">Packed with insight</div>
+          <div class="sub">Brief subtitle</div>
+        </div>
+      </div>
+
+      <div class="feature" role="listitem">
+        <div class="icon c3" aria-hidden="true"></div>
+        <div>
+          <div class="label">Interviews with diverse voices</div>
+          <div class="sub">Brief subtitle</div>
+        </div>
+      </div>
+
+      <div class="feature" role="listitem">
+        <div class="icon c4" aria-hidden="true"></div>
+        <div>
+          <div class="label">Key facts and etiquette tips</div>
+          <div class="sub">Brief subtitle</div>
+        </div>
+      </div>
+
+      <div class="feature" role="listitem">
+        <div class="icon c5" aria-hidden="true"></div>
+        <div>
+          <div class="label">A concise 1-hour read</div>
+          <div class="sub">Brief subtitle</div>
+        </div>
+      </div>
+
+      <div class="feature" role="listitem">
+        <div class="icon c6" aria-hidden="true"></div>
+        <div>
+          <div class="label">Instant digital access</div>
+          <div class="sub">Brief subtitle</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
