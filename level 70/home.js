@@ -9,7 +9,7 @@ if (age > 18) {
 
 // 2
 function greet(name) {
-  console.log("Hello, " + name);
+  console.log(`hello ${name} `);
 }
 
 let userName = prompt("Enter your name:");

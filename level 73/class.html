@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let fruits = ["apple", "banana", "orange"];
+let vegetables = ["tomato", "cucumber", "onion"];
+//1
+let Items = fruits.concat(vegetables);
+
+console.log(Items); 
+
+//2
+let numbers = [];
+
+for (let i = 1; i <= 20; i++) {
+  numbers.push(i);
+}
+console.log("სია შევსების შემდეგ:", numbers);
+
+//3
+for (let i = 0; i < 5; i++) {
+  numbers.pop();
+}
+console.log("5 ელემენტის წაშლის შემდეგ:", numbers);
+
+//4
+let colors = ["red", "green", "blue", "yellow", "purple"];
+
+let index = index(prompt("მიუთითე ინდექსი (0-დან 4-მდე):"));
+
+if (index >= 0 && index < colors.length) {
+  colors.splice(index, 1);
+  console.log("განახლებული სია:", colors);
+} else {
+  console.log("არასწორი ინდექსი");
+}
+
+let wordParts = ["he", "ll", "o"]; 
+
+let fullWord = wordParts.join("");
+console.log(fullWord); 
+    </script>
+</body>
+</html>

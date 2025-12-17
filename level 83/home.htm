@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Tasks</title>
+<style>
+
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #1e1e5f, #0d0d23);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background: #0c0c1d;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    width: 360px;
+    box-shadow: 0 0 15px rgba(115, 87, 255, 0.5);
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .header h1 {
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+
+  .tag {
+    background-color: #2b3c30;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #61ff88;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-left: 10px;
+  }
+
+  .header .today {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  input[type="text"] {
+    flex-grow: 1;
+    background-color: #151529;
+    border: 1px solid #3a3a6e;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    color: #e1e1e1;
+    transition: border-color 0.3s;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #7357ff;
+    box-shadow: 0 0 8px #7357ff88;
+  }
+
+  button {
+    background: #7357ff;
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 0 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 8px #7357ff88;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background: #583ee4;
+  }
+
+  .filters {
+    margin: 1rem 0;
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .filter-btn {
+    background: #151529;
+    border: 1px solid #3a3a6e;
+    color: #a6a6a6;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .filter-btn.active {
+    background: #7357ff;
+    color: white;
+    border-color: transparent;
+  }
+
+  .tasks {
+    max-height: 160px;
+    overflow-y: auto;
+    border-top: 1px dashed #5e5e96;
+    padding-top: 0.8rem;
+  }
+
+  .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px dotted #4b4b7a;
+  }
+
+  .task button.delete {
+    background: transparent;
+    border: none;
+    color: #d33;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .task button.delete:hover {
+    color: #ff5555;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>My Tasks <span class="tag">JS OBJECTS</span></h1>
+      <div class="today">Today</div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Add a New Task And Press Enter..." />
+      <button id="addBtn">Add</button>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <div class="tasks" id="taskList"></div>
+  </div>
+  
+<script>
+  const taskInput = document.getElementById('taskInput');
+  const addBtn = document.getElementById('addBtn');
+  const taskList = document.getElementById('taskList');
+  const filterButtons = document.querySelectorAll('.filter-btn');
+</script>
+</body>
+</html>

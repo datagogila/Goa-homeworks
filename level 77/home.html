@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guess the Number Game</h1>
+<input type="number" id="userGuess" placeholder="Enter a number 1-10">
+<button id="checkBtn">Check</button>
+<p id="result"></p>
+
+<script>
+  const randomNumber = Math.floor(Math.random() * 10) + 1;
+  let attempts = 3;
+
+  document.getElementById("checkBtn").addEventListener("click", function() {
+    const guess = Number(document.getElementById("userGuess").value);
+    attempts--;
+
+    if (guess === randomNumber) {
+      document.getElementById("result").innerText = " გამოიცანი";
+    } else if (attempts > 0) {
+      document.getElementById("result").innerText = `არასწორია, კიდევ ცადე. (${attempts} left)`;
+    } else {
+      document.getElementById("result").innerText = ` წააგე სწორი რიცხვი იყო ${randomNumber}`;
+    }
+  });
+</script>
+
+</body>
+</html>

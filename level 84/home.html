@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ka">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Game</title>
+  
+</head>
+<style>
+  body {
+    
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #2A7B9B;
+background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 100%, rgba(237, 221, 83, 1) 100%);
+    color: red;
+    text-shadow: 2px 2px 5px black;
+}
+
+
+
+.scores {
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#F {
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.dice {
+    width: 220px;
+    height: 220px;
+    background: red;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 25px;
+    gap: 10px;
+}
+
+.dot {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+}
+
+
+#startBtn {
+    margin-top: 40px;
+    padding: 10px 30px;
+    font-size: 20px;
+    background: red;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+#startBtn:hover { 
+    background: rgb(58, 0, 139);
+ }
+</style>
+<body>
+
+  <div class="scores">
+    <span>PLAYER 1 SCORES <span id="p1Score">0</span></span>
+    <span>PLAYER 2 SCORES <span id="p2Score">0</span></span>
+  </div>
+
+  <h1 id="F">WON</h1>
+
+  <div class="wrapper">
+    <div>
+      <h2>PLAYER 1</h2>
+      <div id="dice1" class="dice"></div>
+    </div>
+
+    <div>
+      <h2>PLAYER 2</h2>
+      <div id="dice2" class="dice"></div>
+    </div>
+  </div>
+
+  <button id="startBtn">START</button>
+
+  <script>function createDots(number) {
+    const dots = Array(9).fill(false);
+
+
+    if (number % 2 === 1) dots[4] = true;
+
+  
+    if (number >= 2) {
+        dots[0] = true;
+        dots[8] = true;
+    }
+
+    
+    if (number >= 4) {
+        dots[2] = true;
+        dots[6] = true;
+    }
+
+  
+    if (number === 6) {
+        dots[3] = true;
+        dots[5] = true;
+    }
+
+    return dots;
+}
+
+function renderDice(element, number) {
+    element.innerHTML = "";
+    const dots = createDots(number);
+
+    dots.forEach(active => {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        if (!active) dot.style.opacity = "0"; 
+        element.appendChild(dot);
+    });
+}
+
+const startBtn = document.getElementById("startBtn");
+const dice1 = document.getElementById("dice1");
+const dice2 = document.getElementById("dice2");
+const p1Score = document.getElementById("p1Score");
+const p2Score = document.getElementById("p2Score");
+const F = document.getElementById("F");
+
+let score1 = 0;
+let score2 = 0;
+
+startBtn.addEventListener("click", () => {
+    const roll1 = Math.floor(Math.random() * 6) + 1;
+    const roll2 = Math.floor(Math.random() * 6) + 1;
+
+    renderDice(dice1, roll1);
+    renderDice(dice2, roll2);
+
+    if (roll1 > roll2) {
+        F.textContent = "PLAYER 1 WON";
+        score1++;
+    } else if (roll2 > roll1) {
+        F.textContent = "PLAYER 2 WON";
+        score2++;
+    } else {
+        F.textContent = "DRAW";
+    }
+
+    p1Score.textContent = score1;
+    p2Score.textContent = score2;
+});
+
+</script>
+</body>
+
+</html>

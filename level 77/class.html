@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image Picker</title>
+</head>
+<body>
+    <img id="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLvC1stYpmyQEPlUiVwfTmZ6l7xnCguNsfGw&s" alt="" width="300">
+    
+    <button onclick="changeImage()"> სურათი</button>
+
+    <script>
+        const images = [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLvC1stYpmyQEPlUiVwfTmZ6l7xnCguNsfGw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTXKmQOs_yVu9EGpChCEeQ9HeCAv9-Qt44sA&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvldGFOLBhoTIePKOeLBjlsnvkqdjmAqRQ_w&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2b1aBolYl8Nz7qikOOim3SF7XNAjUXTKH4g&s"
+        ];
+
+        function changeImage() {
+            const index = Math.floor(Math.random() * images.length);
+            document.getElementById("ფოტო").src = images[index];
+        }
+    </script>
+</body>
+</html>
+

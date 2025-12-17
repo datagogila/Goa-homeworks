@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumOfDifferences(arr) {
+  if (arr.length < 2) return 0; 
+
+  arr.sort((a, b) => b - a);
+
+  let sum = 0;
+  for (let i = 0; i < arr.length - 1; i++) {
+    sum += arr[i] - arr[i + 1];
+  }
+
+  return sum;
+}
+
+function calculator(a, b, sign) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    return 'unknown value';
+  } else if (sign === '+') {
+    return a + b;
+  } else if (sign === '-') {
+    return a - b;
+  } else if (sign === '*') {
+    return a * b;
+  } else if (sign === '/') {
+    return a / b;
+  } else {
+    return 'unknown value';
+  }
+}
+
+function solution(number) {
+  if (number < 0) return 0; 
+  let sum = 0;
+  for (let i = 0; i < number; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      sum += i; 
+    }
+  }
+  
+  return sum;
+}
+
+function getCount(str) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    if (char === 'a') {
+      count++;
+    } else if (char === 'e') {
+      count++;
+    } else if (char === 'i') {
+      count++;
+    } else if (char === 'o') {
+      count++;
+    } else if (char === 'u') {
+      count++;
+    }
+    
+  }
+  return count;
+}
+
+function likes(names) {
+  if (names.length === 0) {
+    return "no one likes this";
+  } else if (names.length === 1) {
+    return names[0] + " likes this";
+  } else if (names.length === 2) {
+    return names[0] + " and " + names[1] + " like this";
+  } else if (names.length === 3) {
+    return names[0] + ", " + names[1] + " and " + names[2] + " like this";
+  } else {
+    return names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this";
+  }
+}
+
+
+function createPhoneNumber(numbers) {
+  let phone = "";
+
+  if (numbers.length === 10) {
+    phone = "(";
+    phone += numbers[0];
+    phone += numbers[1];
+    phone += numbers[2];
+    phone += ") ";
+
+    phone += numbers[3];
+    phone += numbers[4];
+    phone += numbers[5];
+    phone += "-";
+
+    phone += numbers[6];
+    phone += numbers[7];
+    phone += numbers[8];
+    phone += numbers[9];
+  } else {
+    phone = "Invalid input";
+  }
+
+  return phone;
+}
+
+
+    </script>
+</body>
+</html>
