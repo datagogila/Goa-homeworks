@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numberr = Number(prompt("შეიყვანეთ რიცხვი"));
+
+if (number > 50) {
+  console.log("big");
+} else if (number > 25) {
+  console.log("medium");
+} else {
+  console.log("small");
+}
+
+
+const numbert = Number(prompt("შეიყვანეთ რიცხვი"));
+
+console.log(
+  number > 50
+    ? "big"
+    : number > 25
+    ? "medium"
+    : "small"
+);
+
+
+const number = Number(prompt("შეიყვანეთ რიცხვი"));
+
+switch (true) {
+  case number > 50:
+    console.log("big");
+    break;
+  case number > 25:
+    console.log("medium");
+    break;
+  default:
+    console.log("small");
+}
+
+// if else – გამოიყენება რთული ლოგიკური პირობებისთვის
+// ადვილად წასაკითხია და ყველაზე ხშირად გამოიყენება
+
+// ternary operator – მოკლე ჩანაწერია if else-ის
+// კარგია მარტივი პირობებისთვის, მაგრამ რთულ შემთხვევაში კოდი რთულად იკითხება
+
+// switch case – გამოიყენება როცა ბევრი კონკრეტული მნიშვნელობა გვაქვს
+// (მაგ: დღეები, როლები, მენიუები)
+// ნაკლებად ვარგა დიაპაზონებისთვის
+
+//როცა პრობლემა მეორდება (მაგ: ხე, მასივი)
+//კოდი ხდება უფრო ლოგიკური და მოკლე
+
+//ობიექტის სახელი თუ შეიცვალა → კოდი გაფუჭდება
+//this კი ყოველთვის სწორ კონტექსტზე მიუთითებს
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const humanYearsCatYearsDogYears = (humanYears) => {
+  let catYears = 0;
+  let dogYears = 0;
+  
+  for (let i = 1; i <= humanYears; i++) {
+    if (i === 1) {
+      catYears += 15;
+      dogYears += 15;
+    }
+    else if (i === 2) {
+      catYears += 9;
+      dogYears += 9;
+    }
+    else {
+      catYears += 4;
+      dogYears += 5;
+    }
+  }
+  return [humanYears,catYears,dogYears];
+}
+
+const quarterOf = (month) => {
+  if (month <= 3) {
+    return 1
+  } else if (month <= 6) {
+    return 2
+  } else if (month <= 9) {
+    return 3
+  } else if (month <= 12) {
+    return 4
+  }
+  
+}
+
+//3 ვერ გავიგე
+
+function _if(bool, func1, func2) {
+  ( bool == true ) ? func1() : func2();
+}
+
+
+    </script>
+</body>
+</html>

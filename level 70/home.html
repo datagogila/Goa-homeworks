@@ -1,11 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football Mind AI</title>
+
+<style>
+body{
+  margin:0;
+  font-family:system-ui,sans-serif;
+  background:#020617;
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+.app{
+  width:95%;
+  max-width:480px;
+  background:#020617;
+  padding:26px;
+  border-radius:18px;
+  box-shadow:0 0 40px rgba(0,0,0,.6);
+  text-align:center;
+}
+.brain{font-size:60px}
+#question{font-size:20px;min-height:70px}
+.buttons{display:flex;gap:14px;margin-top:22px}
+button{
+  flex:1;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+}
+.yes{background:#22c55e}
+.no{background:#ef4444}
+#info{margin-top:12px;opacity:.7;font-size:14px}
+#learn{display:none;margin-top:15px}
+#learn input{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  margin-bottom:10px;
+}
+</style>
 </head>
+
 <body>
-    <script src="home.js"></script>
+<div class="app">
+  <div class="brain">🧠⚽</div>
+  <div id="question">იფიქრე ფეხბურთელზე…</div>
+
+  <div class="buttons">
+    <button class="yes" onclick="answer(true)">დიახ</button>
+    <button class="no" onclick="answer(false)">არა</button>
+  </div>
+
+  <div id="info"></div>
+
+  <div id="learn">
+    <input id="newName" placeholder="ვინ ჩაფიქრე?">
+    <button onclick="savePlayer()" class="yes">დამახსოვრება</button>
+  </div>
+</div>
+
+<script>
+/* ========= PLAYER GENERATOR ========= */
+const FIRST=["Alex","Leo","Juan","Marco","David","Luis","Ahmed","Ivan","Carlos","Mateo"];
+const LAST=["Silva","Garcia","Rossi","Smith","Khan","Popov","Lopez","Kovac","Hernandez"];
+const POS=["GK","DF","MF","ST"];
+const CONT=["EU","SA","AF","AS","NA"];
+const LEAGUE=["Premier","LaLiga","SerieA","Bundesliga","Ligue1","Other"];
+
+function generatePlayers(n=30000){
+  const a=[];
+  for(let i=0;i<n;i++){
+    a.push({
+      name:FIRST[Math.random()*FIRST.length|0]+" "+LAST[Math.random()*LAST.length|0],
+      position:POS[Math.random()*4|0],
+      continent:CONT[Math.random()*5|0],
+      league:LEAGUE[Math.random()*6|0],
+      ballon:Math.random()<0.02,
+      active:Math.random()<0.85
+    });
+  }
+  return a;
+}
+
+/* ========= LOAD LEARNED ========= */
+const learned = JSON.parse(localStorage.getItem("learnedPlayers")||"[]");
+const PLAYERS = [...learned, ...generatePlayers(30000)];
+
+/* ========= FEATURES ========= */
+const FEATURES=[
+  {key:"position",values:POS,text:v=>`მისი პოზიცია არის ${v}?`},
+  {key:"continent",values:CONT,text:v=>`ის არის ${v}-დან?`},
+  {key:"league",values:LEAGUE,text:v=>`თამაშობს ${v} ლიგაში?`},
+  {key:"ballon",values:[true],text:_=>"მოუგია ოქროს ბურთი?"},
+  {key:"active",values:[true],text:_=>"ამჟამად აქტიურია?"}
+];
+
+/* ========= ENTROPY ========= */
+function entropy(a,b){
+  const t=a+b,pa=a/t,pb=b/t;
+  let e=0;
+  if(pa) e-=pa*Math.log2(pa);
+  if(pb) e-=pb*Math.log2(pb);
+  return e;
+}
+
+function bestQuestion(players){
+  let best=null,score=Infinity;
+  for(const f of FEATURES){
+    for(const v of f.values){
+      const yes=players.filter(p=>p[f.key]===v).length;
+      const no=players.length-yes;
+      if(!yes||!no) continue;
+      const e=entropy(yes,no);
+      if(e<score){score=e;best={f,v};}
+    }
+  }
+  return best;
+}
+
+/* ========= GAME ========= */
+let candidates=[...PLAYERS];
+let current=null;
+let history=[];
+
+function nextQ(){
+  if(candidates.length<=1){
+    document.getElementById("question").innerText =
+      candidates[0] ? `შენ ჩაფიქრებული გქონდა: ${candidates[0].name}` : "ვერ ვიპოვე 😕";
+    document.getElementById("info").innerText="";
+    return;
+  }
+  current=bestQuestion(candidates);
+  if(!current){
+    document.getElementById("question").innerText="ვერ გამოვიცანი 😕 ვის ჩაფიქრე?";
+    document.getElementById("learn").style.display="block";
+    return;
+  }
+  document.getElementById("question").innerText=current.f.text(current.v);
+  document.getElementById("info").innerText=`დარჩა ${candidates.length} ფეხბურთელი`;
+}
+
+function answer(y){
+  history.push({key:current.f.key,value:current.v,yes:y});
+  candidates=candidates.filter(p=>y?p[current.f.key]===current.v:p[current.f.key]!==current.v);
+  nextQ();
+}
+
+/* ========= LEARNING ========= */
+function savePlayer(){
+  const name=document.getElementById("newName").value.trim();
+  if(!name) return;
+
+  const p={name};
+  history.forEach(h=>{ if(h.yes) p[h.key]=h.value; });
+  p.active=true;
+
+  learned.push(p);
+  localStorage.setItem("learnedPlayers",JSON.stringify(learned));
+
+  document.getElementById("question").innerText=
+    `დამიმახსოვრდა 👍 შემდეგში ${name}-ს გამოვიცნობ`;
+  document.getElementById("learn").style.display="none";
+}
+nextQ();
+const REAL_PLAYERS = [
+  {
+    name: "Marcus Rashford",
+    position: "ST",
+    continent: "EU",
+    league: "Premier",
+    ballon: false,
+    active: true
+  },
+  {
+    name: "Erling Haaland",
+    position: "ST",
+    continent: "EU",
+    league: "Premier",
+    ballon: false,
+    active: true
+  },
+  {
+    name: "Lionel Messi",
+    position: "ST",
+    continent: "SA",
+    league: "Other",
+    ballon: true,
+    active: true
+  }
+];
+
+</script>
 </body>
 </html>

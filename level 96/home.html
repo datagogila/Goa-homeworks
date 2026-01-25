@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    const arr1 = [3, 4, 5];
+
+const arr2 = [1, 2, ...arr1];
+
+console.log(arr2); 
+
+const person = {
+    name: "data",
+    surname: "gogilashvili",
+    age: 11,
+    height: 137
+  };
+  
+  const personEyeColor = {
+    eyeColor: "brown",
+    ...person
+  };
+  
+  console.log(personEyeColor);
+
+  const numbers = [
+  1, 2, 3, 4, 5,
+  6, 7, 8, 9, 10,
+  11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20
+];
+
+const [
+  a1, a2, a3, a4, a5,
+  a6, a7, a8, a9, a10,
+  ...restNumbers
+] = numbers;
+
+const firstTen = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10];
+
+const [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10] = restNumbers;
+
+console.log(firstTen);
+console.log(restNumbers);
+
+const data = {
+  title: "Student List",
+  year: 2026,
+  students: ["nia", "Nika", "Luka", "gio"]
+};
+
+const {
+    title,
+  students: [s1, s2, ...otherStudents]
+} = data;
+
+console.log(title);          
+console.log(s1, s2);          
+console.log(otherStudents);   
+
+
+
+ </script>   

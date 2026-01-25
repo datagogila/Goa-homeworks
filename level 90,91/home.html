@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <div class="calculator">
+    <div id="display">0</div>
+
+    <div class="buttons">
+      <button>7</button><button>8</button><button>9</button><button class="p">DEL</button>
+      <button>4</button><button>5</button><button>6</button><button class="p">+</button>
+      <button>1</button><button>2</button><button>3</button><button class="p">-</button>
+      <button>.</button><button>0</button><button class="p">/</button><button class="p">*</button>
+      <button class="reset">RESET</button>
+      <button class="equal">=</button>
+    </div>
+  </div>
+
+  <script>const display = document.getElementById("display");
+    const buttons = document.querySelectorAll("button");
+    
+    let firstNumber = "";
+    let secondNumber = "";
+    let operator = "";
+    let isSecond = false;
+    
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const value = btn.textContent;
+    
+        if (value === "RESET") {
+          firstNumber = "";
+          secondNumber = "";
+          operator = "";
+          isSecond = false;
+          display.textContent = "0";
+          return;
+        }
+    
+        if (value === "DEL") {
+          if (isSecond) {
+            secondNumber = secondNumber.slice(0, -1);
+            display.textContent = secondNumber || "0";
+          } else {
+            firstNumber = firstNumber.slice(0, -1);
+            display.textContent = firstNumber || "0";
+          }
+          return;
+        }
+
+        if (value === "+" || value === "-" || value === "*" || value === "/") {
+          operator = value;
+          isSecond = true;
+          return;
+        }
+    
+     
+        if (value === "=") {
+          let result = 0;
+    
+          const a = Number(firstNumber);
+          const b = Number(secondNumber);
+    
+          if (operator === "+") result = a + b;
+          if (operator === "-") result = a - b;
+          if (operator === "*") result = a * b;
+          if (operator === "/") result = b !== 0 ? a / b : 0;
+    
+          display.textContent = result;
+          firstNumber = result.toString();
+          secondNumber = "";
+          operator = "";
+          isSecond = false;
+          return;
+        }
+    
+        if (!isSecond) {
+          firstNumber += value;
+          display.textContent = firstNumber;
+        } else {
+          secondNumber += value;
+          display.textContent = secondNumber;
+        }
+      });
+    });
+    </script>
+</body>
+</html>

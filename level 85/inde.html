@@ -4,10 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown until ends 2025</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('download.webp');
+    color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-size: 100px;
+    letter-spacing: 2px;
+}
+
+.timer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.box {
+    background: black;
+    padding: 25px 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00e1c7;
+}
+
+.box span {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.box p {
+    margin-top: 5px;
+    font-size: 16px;
+    color: cornsilk;
+}
+
+.new-year {
+    background: radial-gradient(circle, #020024, #090979, #00d4ff);
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { filter: brightness(1); }
+    to { filter: brightness(1.3); }
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: red;
+    top: -10px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+</style>
     <div class="container">
         <h1>2025 Ends in</h1>
 
@@ -29,9 +106,54 @@
                 <p>Seconds</p>
             </div>
         </div>
+          <h2 id="newYearMessage" style="display:none; font-size:150px; color:red;">
+                🎉 Happy New Year 2026 🎉
+                </h2>    
     </div>
 
-    <script src="script.js"></script>
+<script>
+const day = document.getElementById("day");
+const hr  = document.getElementById("hr");
+const min = document.getElementById("min");
+const sec = document.getElementById("sec");
+
+const interval = setInterval(function () {
+    let now = new Date();
+    let target = new Date("Jan 1, 2026 00:00:00");
+    let time = target - now;
+
+    if (time <= 0) {
+        clearInterval(interval);
+
+        document.querySelector(".timer").style.display = "none";
+        document.getElementById("newYearMessage").style.display = "block";
+        document.body.classList.add("new-year");
+
+        for (let i = 0; i < 150; i++) {
+            let gg = document.createElement("div");
+            gg.className = "gg";
+            gg.style.left = Math.random() * 100 + "vw";
+            gg.style.background = `hsl(${Math.random()*360},100%,50%)`;
+            gg.style.animationDuration =
+                (Math.random() * 3 + 2) + "s";
+            document.body.appendChild(gg);
+        }
+        return;
+    }
+
+    let days = Math.floor(time / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(time / (1000 * 60 * 60)) % 24;
+    let minutes = Math.floor(time / (1000 * 60)) % 60;
+    let seconds = Math.floor(time / 1000) % 60;
+
+    day.textContent = days;
+    hr.textContent = hours;
+    min.textContent = minutes;
+    sec.textContent = seconds;
+
+}, 1000);
+</script>
+
 </body>
 </html>
 

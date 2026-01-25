@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ECMAScript ენის სპეციფიკაციის მეექვსე მნიშვნელოვანი გამოშვება,
+        // რომელიც JavaScript-ს მნიშვნელოვან სინტაქსურ და ფუნქციურ გაუმჯობესებას სთავაზობს.
+
+        //კლასის ობიექტის ეგზემპლარის შესაქმნელად და ინიციალიზაციისთვის.
+    function Car(brand, model, year, color) {
+    this.brand = brand
+    this.model = model
+    this.year = year
+    this.color = color
+}
+
+let car1  = new Car('BMW', 'X5', 2020, 'Black')
+let car2  = new Car('Audi', 'A6', 2019, 'White')
+let car3  = new Car('Mercedes', 'C-Class', 2021, 'Silver')
+let car4  = new Car('Toyota', 'Camry', 2018, 'Red')
+let car5  = new Car('Honda', 'Civic', 2017, 'Blue')
+let car6  = new Car('Ford', 'Focus', 2016, 'Gray')
+let car7  = new Car('Kia', 'Sportage', 2022, 'Green')
+let car8  = new Car('Hyundai', 'Elantra', 2020, 'Yellow')
+let car9  = new Car('Mazda', 'CX-5', 2019, 'Brown')
+let car10 = new Car('Nissan', 'Altima', 2015, 'Black')
+
+console.log(car1)
+console.log(car2)
+console.log(car3)
+console.log(car4)
+console.log(car5)
+console.log(car6)
+console.log(car7)
+console.log(car8)
+console.log(car9)
+console.log(car10)
+
+
+//JavaScript-ში, for...in-სა და for...of-ს შორის ძირითადი განსხვავება ისაა, თუ რაზე იტერაციას უკეთებენ ისინი:
+//for...in (Keys): იტერაციას უკეთებს ობიექტის ჩამოთვლილ თვისებებს (გასაღებებს).
+//for...of (Values): იტერაციას უკეთებს იტერაციადი ობიექტით (მაგალითად, მასივით ან სტრიქონით) განსაზღვრულ მნიშვნელობებს.
+
+function square(num) {
+    return num * num
+}
+
+console.log(square(5)) 
+
+const square2 = function(num) {
+    return num * num
+}
+
+console.log(square2(6))
+
+const square3 = (num) => {
+    return num * num
+}
+
+
+const square4 = num => num * num
+console.log(square4(7))
+
+
+
+    </script>
+</body>
+</html>

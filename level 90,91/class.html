@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="" />
+  <style>
+    body {
+    background: #3b4664;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  .calculator {
+    background: #252d44;
+    padding: 20px;
+    border-radius: 10px;
+    width: 260px;
+  }
+  
+  #display {
+    background: #181f32;
+    color: white;
+    text-align: right;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .p { 
+    background: #647299;
+    color: white; 
+}
+
+  .reset{
+     grid-column: span 2;
+     background: #647299;
+      color: white;
+ }
+  .equal { 
+    grid-column: span 2; 
+    background: #d13f30;
+    color: white;
+ }
+  
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div id="display">0</div>
+
+    <div class="buttons">
+      <button>7</button><button>8</button><button>9</button><button class="p">DEL</button>
+      <button>4</button><button>5</button><button>6</button><button class="p">+</button>
+      <button>1</button><button>2</button><button>3</button><button class="p">-</button>
+      <button>.</button><button>0</button><button class="p">/</button><button class="p">*</button>
+      <button class="reset">RESET</button>
+      <button class="equal">=</button>
+    </div>
+  </div>
+</body>
+</html>

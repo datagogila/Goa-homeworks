@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function Car(model, color, year) {
+    this.model = model;
+    this.color = color;
+    this.year = year;
+    this.status = "working"; 
+
+let car1 = new Car("BMW", "Black", 2018);
+let car2 = new Car("Audi", "White", 2020);
+let car3 = new Car("Toyota", "Silver", 2015);
+let car4 = new Car("Mercedes", "Gray", 2022);
+let car5 = new Car("Honda", "Blue", 2017);
+
+    this.sayHy = function () {
+        console.log(
+            this.model,
+            this.color,
+            this.year,
+            this.status
+        );
+    };
+}
+
+//for...of
+//გამოიყენება მასივებზე (array)
+//გაძლევს ელემენტს (value)
+
+//for...in
+//გამოიყენება ობიექტებზე (object)
+//გაძლევს key-ს (property name)
+
+// 1 გზა
+function tiki(name, age) {
+    return `მე ვარ ${age} წლის და მქვია ${name}`;
+}
+
+// 2 გზა
+const tiki = function (name, age) {
+    return `მე ვარ ${age} წლის და მქვია ${name}`;
+};
+
+//3 გზა
+const tiki3 = (name, age) => {
+    return `მე ვარ ${age} წლის და მქვია ${name}`;
+};
+
+console.log(tiki("Giorgi", 17));
+console.log(tiki("Ana", 16));
+console.log(tiki3("Luka", 18));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ზღვის ლომები</title>
+  <link rel="stylesheet" href="">
+  <style>
+body {
+  font-family: sans-serif;
+  background: #eef6f8;
+  padding: 30px;
+}
+
+h1 {
+  color: #1a4d6b;
+}
+
+form {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+button {
+  padding: 8px;
+  width: 100%;
+  background: #1a4d6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>ზღვის ლომები</h1>
+  <p>
+    ზღვის ლომები არიან საზღვაო ძუძუმწოვრები, რომლებიც გამოირჩევიან
+    ჭკუით, მოქნილობით და სოციალურობით.
+  </p>
+
+  <hr>
+
+  <h2>რეგისტრაცია</h2>
+  <form id="registerForm">
+    <input type="text" id="regUsername" placeholder="მომხმარებლის სახელი">
+    <input type="password" id="regPassword" placeholder="პაროლი">
+    <button type="submit">რეგისტრაცია</button>
+    <p class="error" id="regError"></p>
+  </form>
+
+  <hr>
+
+  <h2>ლოგინი</h2>
+  <form id="loginForm">
+    <input type="text" id="logUsername" placeholder="მომხმარებლის სახელი">
+    <input type="password" id="logPassword" placeholder="პაროლი">
+    <button type="submit">შესვლა</button>
+    <p class="error" id="logError"></p>
+  </form>
+
+  <script></script>
+</body>
+</html>
