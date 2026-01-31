@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//1
+let numbers = [10, 20, 30, 40];
+
+let budu = numbers.map(num => num / 2);
+console.log(budu); 
+
+//2
+let names = ["დათა", "თორნიკე", "დემე"];
+let kvara = names.map(name => name.length);
+
+console.log(kvara);
+
+//3
+let names2 = ["ბარბარე", "გიორგი", "ნიკა"];
+let yiyliyo = names.map((name, index) => name.length * index);
+
+console.log(yiyliyo);
+
+
+    </script>
+</body>
+</html>
