@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//map გამოიყენება რომ შევქმნათ ახალი მასივი.
+//filter გამოიყენება იმისთვის რომ გავფილტროთ რაიმე მასივი
+
+let numbers = [11, 12, 13, 20, 17, 15, 16];
+let filteredNumber = numbers.filter((num) => {
+    if (num > 10) {
+        return true 
+    } else {
+        return false 
+    }
+});
+
+console.log(filteredNumber); 
+
+
+let names = ["ana", "data", "gabo", "zuka", "nika", "elene", "mari"];
+let filteredNames = names.filter((name) =>{
+    if (name.split('').reverse().join('') === name) {
+        returntrue
+    }else{
+        return false
+    }
+}
+)
+console.log( filteredNames);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+       let names = ["ana", "andria", "anastasia", "giorgi", "axtona", "nika", "anamaria", "dato"];
+
+let result1 = names.filter(function(name){
+    return name[0] == "a" , name[name.length - 1] == "a";
+});
+
+console.log(result1);
+
+//2
+let yiyliyo = ["ana", 2, "gio", 7, "dato", 8, "nika", 5, "luka"];
+
+let result2 = yiyliyo.filter(function(element, index){
+
+    if (index % 2 === 0){
+        return true;
+    }
+
+    if (element % 2 === 0){
+        return true;
+    }
+
+    return false;
+});
+
+console.log(result2);
+
+    </script>
+</body>
+</html>

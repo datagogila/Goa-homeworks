@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //1  
+      let nums = [1, 2, 3, 4, 5];
+
+let budu = nums.map(num => num * 2);
+
+console.log(budu); 
+
+
+//2
+let names = ["ana", "gio", "luka"];
+
+let upperNames = names.map(name => name.toUpperCase());
+
+console.log(upperNames);
+
+
+//3
+let prices = [10, 20, 30];
+
+let price = prices.map(price => price * 1.18);
+
+console.log(price); 
+
+//4
+let num = [2, 4, 6, 8];
+
+let result = nums.map(num => `Number: ${num}`);
+
+console.log(result);
+
+//5
+let users = [
+  { name: "Ana", age: 15 },
+  { name: "Gio", age: 17 },
+  { name: "Luka", age: 16 }
+];
+
+let namesOnly = users.map(user => user.name);
+
+console.log(namesOnly); 
+
+
+
+    </script>
+</body>
+</html>
