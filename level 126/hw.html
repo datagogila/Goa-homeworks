@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        function oddOrEven(array) {
+            let sum = array.reduce((acc, num) => acc + num, 0);
+
+            if (sum % 2 === 0) {
+                return "even";
+            } else {
+                return "odd";
+            }
+        }
+
+        //2
+        function findShort(s) {
+            let words = s.split(" ");
+            let shortest = words[0].length;
+
+            for (let word of words) {
+                if (word.length < shortest) {
+                    shortest = word.length;
+                }
+            }
+
+            return shortest;
+        }
+
+        //3
+        function highAndLow(numbers) {
+            let nums = numbers.split(" ").map(Number);
+
+            let max = Math.max(...nums);
+            let min = Math.min(...nums);
+
+            return `${max} ${min}`;
+        }
+
+    </script>
+</body>
+
+</html>

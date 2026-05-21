@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        //resolve - არის დადებითი შედეგი
+        //reject - არის უარყოფითი შედეგი, იგივე error
+
+        //2
+        //pending - არის რომელიც არც resolve არის და არც reject
+        //fulfilled - არის რომელიც დადებითად შესრულდა
+        //rejected - რომელიც უარყოფითად შესრულდა
+
+        //3
+        function checkNumber(num) {
+            return new Promise((resolve, reject) => {
+                if (num % 2 === 0) {
+                    resolve("Even");
+                } else {
+                    reject("Odd");
+                }
+            });
+        }
+        //4
+        function checkPassword(password) {
+            return new Promise((resolve, reject) => {
+                if (password === "1234") {
+                    resolve("Access granted");
+                } else {
+                    reject("Access denied");
+                }
+            });
+        }
+        //5
+        const promise = new Promise((resolve) => {
+            resolve({ name: "Gio", age: 20 });
+        });
+
+        promise.then(user => console.log(user.name));
+    </script>
+</body>
+
+</html>

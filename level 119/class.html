@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        function manqanebi(brand, model, color) {
+            this.brand = brand;
+            this.model = model;
+            this.color = color;
+        }
+        let car1 = new manqanebi("bmw", "m4", "White");
+        let car2 = new manqanebi("Mercedes", "cls63", "Black");
+
+        console.log(car1, car2);
+
+        //2
+        function studenti(name, age, grade) {
+            this.name = name;
+            this.age = age;
+            this.grade = grade;
+        }
+        let student1 = new studenti("data", 12, "6");
+        let student2 = new studenti("luka", 11, "5");
+        let student3 = new studenti("gio", 10, "5");
+
+        console.log(student1, student2, student3);
+
+        //3
+        function telefoni(brand, price, storage) {
+            this.brand = brand;
+            this.price = price;
+            this.storage = storage;
+        }
+        const phone1 = new telefoni("apple", 1200, "128gb");
+        const phone2 = new telefoni("samsung", 900, "256gb");
+        console.log(phone1, phone2);
+
+        //4
+        function cxovelii(type, name, age) {
+            this.type = type;
+            this.name = name;
+            this.age = age;
+        }
+        const animal1 = new cxovelii("dog", "jesi", 1);
+        const animal2 = new cxovelii("sat", "tobi", 2);
+
+        console.log(animal1, animal2);
+
+        //5
+        function user(username, email, isActive) {
+            this.username = username;
+            this.email = email;
+            this.isActive = isActive;
+        }
+
+        const user1 = new user("data123", "xinkali666@gmail.com", true);
+        const user2 = new user("mari123", "mariiii.777@gmail.com", false);
+
+        console.log(user1, user2);
+
+
+        // 1
+        try {
+            const x = 10;
+            x = 30;
+            console.log(x);
+        }
+        catch (e) {
+            console.log(e.message);
+        }
+
+        //2
+        try {
+            let name = "Luka";
+            name();
+        }
+        catch (e) {
+            console.log("ეს ფუნქცია არ არის");
+        }
+
+        //3 
+        try {
+            let data = "{ name: Luka }";
+            JSON.parse(data);
+        }
+        catch (e) {
+            console.log("არასწორი json");
+        }
+
+        //4
+        try {
+            let arr1 = [7, 6, 5];
+            arr1.toUpperCase();
+        }
+        catch (e) {
+            console.log("არასწორი მეთოდი");
+        }
+
+        //5
+        function divide(a, b) {
+            return a / b
+        }
+
+        try {
+            let result = divid(5, 2)
+            console.log(result)
+        } 
+        catch (e) {
+            console.log(e)
+        }
+    </script>
+</body>
+
+</html>

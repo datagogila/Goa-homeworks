@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>documment</title>
+</head>
+
+<body>
+
+    <input type="text" id="input" placeholder="Enter title or id">
+    <button id="btn">Search</button>
+
+    <div id="container"></div>
+
+    <script>
+        const createNewCard = (product) => {
+            let parentDiv = document.createElement("div")
+            parentDiv.style.width = "300px"
+            parentDiv.style.border = "1px solid black"
+            parentDiv.style.padding = "15px"
+            parentDiv.style.margin = "10px"
+
+            let productImage = document.createElement("img")
+            productImage.src = product.images[0]
+            productImage.style.width = "200px"
+
+            let productTitle = document.createElement("h2")
+            productTitle.textContent = product.title
+
+            let productPrice = document.createElement("p")
+            productPrice.textContent = product.price
+
+            parentDiv.append(productImage, productTitle, productPrice)
+
+            return parentDiv
+        }
+
+        let btn = document.getElementById("btn")
+        let input = document.getElementById("input")
+        let container = document.getElementById("container")
+
+        btn.addEventListener("click", function () {
+
+            fetch('https://api.escuelajs.co/api/v1/products/')
+                .then(response => response.json())
+                .then(data => {
+                    for (let i = 0; i < data.length; i++) {
+
+                        if (data[i].id == value) {
+                            let card = createNewCard(data[i])
+                            container.appendChild(card)
+                        }
+
+                        if (data[i].title.toLowerCase() != -1) {
+                            let card = createNewCard(data[i])
+                            container.appendChild(card)
+                        }
+                    }
+                })
+        })
+    </script>
+
+</body>
+
+</html>

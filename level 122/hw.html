@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1
+        class Book {
+            constructor(title, author, pages) {
+                this.title = title;
+                this.author = author;
+                this.pages = pages;
+                this.isRead = false;
+            }
+
+            read() {
+                this.isRead = true;
+            }
+
+            getSummary() {
+                return `${this.title} by ${this.author}, ${this.pages} pages`;
+            }
+        }
+
+        const book1 = new Book("Harry Potter", "J.K. Rowling", 500);
+
+        console.log(book1.getSummary());
+        book1.read();
+
+        console.log(book1.isRead);
+
+        //2 
+        class Laptop {
+            constructor(brand, ram, storage) {
+                this.brand = brand;
+                this.ram = ram;
+                this.storage = storage;
+                this.isOn = false;
+            }
+            turnOn() {
+                this.isOn = true;
+            }
+            turnOff() {
+                this.isOn = false;
+            }
+            upgradeRam(amount) {
+                this.ram += amount;
+            }
+        }
+
+        const laptop1 = new Laptop("Dell", 8, 512);
+
+        laptop1.turnOn();
+
+        laptop1.upgradeRam(8);
+        console.log(laptop1);
+
+        //3
+
+        class Player {
+            constructor(username, health, level) {
+                this.username = username;
+                this.health = health;
+                this.level = level;
+            }
+
+            takeDamage(amount) {
+                this.health -= amount;
+
+                if (this.health < 0) {
+                    this.health = 0;
+                }
+            }
+            heal(amount) {
+                this.health += amount;
+
+                if (this.health > 100) {
+                    this.health = 100;
+                }
+            }
+            levelUp() {
+                this.level++;
+            }
+        }
+
+        const player1 = new Player("Nika", 100, 1);
+
+        player1.takeDamage(30);
+        player1.heal(20);
+        player1.levelUp();
+        console.log(player1);
+
+        //4
+        class ShoppingCart {
+            constructor() {
+                this.items = [];
+            }
+            addItem(item) {
+                this.items.push(item);
+            }
+            removeItem(itemName) {
+                this.items = this.items.filter(
+                    item => item.name !== itemName
+                );
+            }
+            getTotalItems() {
+                return this.items.length;
+            }
+        }
+        console.log(cart.items);
+        console.log(cart.getTotalItems());
+
+        // 5
+
+        class Timer {
+            constructor(time) {
+                this.time = time;
+                this.interval = null;
+            }
+            start() {
+                this.interval = setInterval(() => {
+                    console.log(this.time);
+                    this.time--;
+                    if (this.time < 0) {
+                        clearInterval(this.interval);
+                    }
+                }, 1000);
+            }
+            stop() {
+                clearInterval(this.interval);
+            }
+            reset() {
+                this.time = 0;
+            }
+        }
+        const timer = new Timer(5);
+        timer.start();
+
+    </script>
+</body>
+
+</html>

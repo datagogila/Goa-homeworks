@@ -11,9 +11,8 @@
        let names = ["ana", "andria", "anastasia", "giorgi", "axtona", "nika", "anamaria", "dato"];
 
 let result1 = names.filter(function(name){
-    return name[0] == "a" , name[name.length - 1] == "a";
+    return name[0] == "a" 
 });
-
 console.log(result1);
 
 //2
@@ -31,8 +30,21 @@ let result2 = yiyliyo.filter(function(element, index){
 
     return false;
 });
-
 console.log(result2);
+
+//3
+let numbers = [10, 20, 30, 40, 50, 60];
+
+let result = numbers.filter(function(element, index){
+    return index % 2 == 0;
+});
+
+console.log(result);
+
+//4
+//როგორც JavaScript-ში, ასევე Python-ში, filter და map არის მეთოდები, რომლებიც გამოიყენება განმეორებადი მონაცემთა სტრუქტურების
+//(მასივების/სიების) ტრანსფორმაციისა და მანიპულირებისთვის. JavaScript იყენებს მეთოდებს, რომლებიც პირდაპირ 
+//მიმაგრებულია მასივის პროტოტიპზე, ხოლო Python იყენებს ჩაშენებულ ფუნქციებს, რომლებსაც შეუძლიათ სხვადასხვა განმეორებად ფაილებზე მუშაობა.
 
     </script>
 </body>

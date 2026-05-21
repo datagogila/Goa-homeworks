@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1
+        function zeroFuel(distanceToPump, mpg, fuelLeft) {
+            if (mpg * fuelLeft >= distanceToPump) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        // 2
+        function sumArray(arr) {
+            if (arr == null || arr.length <= 2) {
+                return 0;
+            } else {
+                let sum = 0;
+                let max = arr[0];
+                let min = arr[0];
+
+                for (let i = 0; i < arr.length; i++) {
+                    sum += arr[i];
+
+                    if (arr[i] > max) {
+                        max = arr[i];
+                    }
+
+                    if (arr[i] < min) {
+                        min = arr[i];
+                    }
+                }
+
+                return sum - max - min;
+            }
+        }
+
+        // 3
+        function doubleChar(str) {
+            let result = "";
+
+            for (let i = 0; i < str.length; i++) {
+                result += str[i] + str[i];
+            }
+
+            return result;
+        }
+
+        // 4
+        function arrayPlusArray(arr1, arr2) {
+            let sum = 0;
+
+            for (let i = 0; i < arr1.length; i++) {
+                sum += arr1[i];
+            }
+
+            for (let i = 0; i < arr2.length; i++) {
+                sum += arr2[i];
+            }
+
+            return sum;
+        }
+
+        // 5
+        function testEven(n) {
+            if (n % 2 === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

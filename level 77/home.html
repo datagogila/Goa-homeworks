@@ -31,3 +31,93 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>Rainbow Notification</title>
+
+<style>
+    body {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 10px;
+        background: #f2f2f2;
+    }
+
+    /* 🌈 მოძრავი ჩარჩო */
+    .rainbow {
+        padding: 10px 15px;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 3px solid transparent;
+        background: 
+            linear-gradient(white, white) padding-box,
+            linear-gradient(
+                270deg,
+                red, orange, yellow, green, cyan, blue, violet, red
+            ) border-box;
+        background-size: 400% 400%;
+        animation: rainbowMove 4s linear infinite;
+        outline: none;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    @keyframes rainbowMove {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 400% 50%; }
+    }
+
+
+    #message {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        background: black;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        transform: translateX(400px);
+        transition: 0.5s;
+        min-width: 200px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<input type="text" id="input" class="rainbow" placeholder="შეიყვანე ტექსტი">
+<button id="submit" class="rainbow">Submit</button>
+
+<div id="message"></div>
+
+<script>
+    let input = document.getElementById("input");
+    let button = document.getElementById("submit");
+    let message = document.getElementById("message");
+
+    button.addEventListener("click", () => {
+
+        let text = input.value;
+        if (text === "") return;
+
+        message.textContent = text;
+        message.style.transform = "translateX(0px)";
+
+        setTimeout(() => {
+            message.style.transform = "translateX(400px)";
+        }, 3000);
+
+        input.value = "";
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <button id="btn">Search</button>
+
+    <div id="container"></div>
+
+    <script>
+        const createNewCard = (product) => {
+            let div = document.createElement("div")
+            div.style.width = "300px"
+            div.style.border = "1px solid black"
+            div.style.padding = "10px"
+            div.style.margin = "10px"
+
+            let img = document.createElement("img")
+            img.src = product.images[0]
+            img.style.width = "200px"
+
+            let title = document.createElement("h3")
+            title.textContent = product.title
+
+            let price = document.createElement("p")
+            price.textContent = product.price
+
+            div.append(img, title, price)
+
+            return div
+        }
+
+        let btn = document.getElementById("btn")
+        let input = document.getElementById("input")
+        let container = document.getElementById("container")
+
+        btn.addEventListener("click", function () {
+
+            let value = input.value.toLowerCase()
+
+            let fetchedApi = fetch("https://api.escuelajs.co/api/v1/products/")
+            let Response = fetchedApi.then(response => response.json())
+
+            Response.then(data => {
+                data.map(item => {
+
+                    if (item.id == value) {
+                        let productElement = createNewCard(item)
+                        container.appendChild(productElement)
+                    }
+                    if (item.title.toLowerCase().includes(value)) {
+                        let productElement = createNewCard(item)
+                        container.appendChild(productElement)
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

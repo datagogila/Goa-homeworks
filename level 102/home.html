@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+         list = [1,2,3,4,5,6,7,8,9,10]
+
+        list1 = list.reduce((a,b) => {
+         return a/b
+ })
+        console.log(list1)
+
+        //2
+        Names = ["B","a","r","c","a",]
+
+        names1 = Names.reduce((a,b) => {
+        return a + b
+})
+         //3
+         let List = [1,2,3,4,5,6,7,8,9,10]
+
+        let List1 = List.reduce((a,b) => {
+         return a / b / List.length()
+})
+
+       //4
+       // map — მასივის თითოეულ ელემენტს ცვლის და აბრუნებს ახალ მასივს იგივე რაოდენობის ელემენტებით
+
+// filter — მასივიდან არჩევს მხოლოდ იმ ელემენტებს, რომლებიც პირობას აკმაყოფილებს და აბრუნებს ახალ მასივს
+
+// reduce — მასივის ყველა ელემენტს აერთიანებს ერთ მნიშვნელობად (მაგ: ჯამი, საშუალო, სიტყვა და ა.შ.)
+
+
+    </script>
+</body>
+</html>

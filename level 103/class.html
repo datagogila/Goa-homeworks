@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        let odd_nums = nums.filter((a,b) => {
+       return a % 2 === 0
+})
+        console.log(odd_nums) 
+
+ 
+    let sum = odd_nums.reduce((a,b) => {
+    return a + b
+})
+
+console.log(sum) 
+
+
+//2
+let students = [
+    {name: "giorgi", score: 70},
+    {name: "nika", score: 45},
+    {name: "luka", score: 90},
+    {name: "toko", score: 30},
+    {name: "dato", score: 55}
+]
+let studentsstatus = students.map(student => {
+    return {
+        name: student.name,
+        status: student.score > 50 ? "Pass" : "Fail"
+    }
+})
+
+console.log(studentstatus)
+
+
+let failed = students_status.filter(student => students === "Fail")
+console.log(failed)
+
+
+let i = 1
+
+while (i <= 20) numbers.push(i)
+    i++
+
+console.log(numbers)
+
+
+let yiyliyo = numbers.reduce((a, b) =>{
+return a * b
+})
+
+console.log(yiyliyo)
+
+//4
+const products = [
+  { name: "apple", price: 50 },
+  { name: "banana", price: 140 },
+  { name: "orange", price: 600 },
+  { name: "grape", price: 90 },
+  { name: "green apple", price: 150 }
+];
+
+const kvara = products.filter(product => product.price > 100);
+
+
+const Names = kvara.map(product.name);
+
+console.log(Names);
+
+//5
+function Car(brand, year) {
+  this.brand = brand;
+  this.year = year;
+}
+
+const car = new Car("BMW", 2005);
+
+  this.qochora = function() {
+    switch (true) {
+      case (this.year < 2000):
+        return "Old";
+      case (this.year >= 2000 , this.year <= 2015):
+        return "Modern";
+      case (this.year > 2015):
+        return "New";
+    }
+  };
+
+  console.log(Car)
+
+//6
+// ვერბ გავიგე სორი
+
+//7
+function User(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+const user1 = new User("toko", 17);
+const user2 = new User("data", 20);
+const user3 = new User("deme", 100007);
+const user4 = new User("giorgi", 1);
+
+const users = [user1, user2, user3, user4];
+
+const adult = users.filter(user => user.age >= 18);
+
+console.log(adults);
+
+//8 
+const list1 = [1, 2, 3];
+const list2 = [4, 5, 6];
+
+const miqautadze = [...list1, ...list2];
+
+for (let i = 0; i < miqautadze.length; i++) {
+  console.log(miqautadze[i]);
+}
+
+//9
+//გავიგე
+
+//10
+const INDIA = ["apple", "banana", "cherry", "kiwi", "pineapple", "grape"];
+
+const longWords = INDIA.filter(INDIA.length > 5);
+
+const upperCaseWords = longWords.map(word => INDIA.toUpperCase());
+
+console.log(upperCaseWords);
+
+//11 
+const numbers = [5, 12, 7, 20, 3, 15, 8];
+
+let count = 0;
+let G = 0;
+
+while (G < numbers.length) {
+  if (numbers[G] > 10) {
+    count++;
+  } else {
+    
+  }
+  i++;
+}
+
+console.log(count);
+
+//12
+const tetrirvino = [
+  { name: "muhamed", role: "manager" },
+  { name: "BARBARE", role: "developer" },
+  { name: "city boy", role: "designer" },
+  { name: "data", role: "developer" }
+];
+
+
+const Salary = tetrirvino.map(a => {
+  let salary;
+  switch (a.role) {
+    case "manager":
+      salary = 5000;
+      break;
+    case "developer":
+      salary = 4000;
+      break;
+    case "designer":
+      salary = 3500;
+      break;
+    default:
+      salary = 3000;
+  }
+  return { ...a, salary };
+});
+
+console.log(Salary);
+
+//12
+function EvenNumbers(numbers) {
+  const evens = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      evens.push(numbers[i]);
+    }
+  }
+  return evens;
+}
+console.log(numbers);
+
+//13
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+const budu1 = new Product("ps5", 10000);
+const budu2 = new Product("nintedo", 6000);
+const budu3 = new Product("Tablet", 4000);
+
+const pro = [budu1, budu2, budu3];
+
+const totalPrice = pro.reduce((a, b) => {
+return a + pro.price, 0;
+})
+console.log(totalPrice);
+
+//14
+function Age(karaqi) {
+  if (karaqi.Property("age")) {
+    return { ...karaqi, age: 0 };
+  } else {
+    return karaqi;
+  }
+}
+
+console.log(Age(person1)); 
+console.log(Age(person2)); 
+
+//15
+const user = [
+  { name: "churchxela", isAdmin: true },
+  { name: "shushxuna", isAdmin: false },
+  { name: "rvino", isAdmin: true },
+  { name: "puri", isAdmin: false }
+];
+
+const adminNames = user.map(user =>{
+return user.isAdmin;
+})
+
+
+console.log(adminNames);
+
+    </script>
+</body>
+</html>

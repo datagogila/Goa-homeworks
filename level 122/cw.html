@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        class Car {
+
+            constructor(brand, model, year, speed) {
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+                this.speed = speed;
+            }
+
+            drive() {
+                return "the car is moving";
+            }
+
+            increaseSpeed(amount) {
+                this.amount += speed;
+            }
+        }
+
+        //2
+        class Student {
+
+            constructor(name, age, grade) {
+                this.name = name;
+                this.age = age;
+                this.grade = grade;
+            }
+            introduce() {
+                return `hi my name is ${this.name}`;
+            }
+            isPassed() {
+                return this.grade >= 51;
+            }
+        }
+
+        //3
+        class Rectangle {
+            w
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            }//მეთოდების გამოყენებას ვერ მივხვდი
+        }
+
+        //4
+        class BankAccount {
+            constructor(owner, balance) {
+                this.owner = owner;
+                this.balance = balance;
+            }
+
+            deposit(amount) {
+                this.balance += amount;
+            }
+            withdraw(amount) {
+                amount -= this.balance;
+            }
+            getBalance() {
+                return this.balance;
+            }
+        }
+
+        //5
+        class Phone {
+            constructor(brand, model, battery) {
+                this.brand = brand;
+                this.model = model;
+                this.battery = battery;
+            }
+            charge() {
+                this.battery = 100;
+            }
+            use(amount) {
+                this.battery -= amount;
+
+                if (this.battery <= 0) {
+                    return "phone is deaddd";
+                } 
+            }
+        }
+
+
+
+        //6
+        class Animal {
+            constructor(name, type, sound) {
+                this.name = name;
+                this.type = type;
+                this.sound = sound;
+            }
+            makeSound() {
+                return this.sound;
+            }
+            info() {
+                return `this is a ${this.type} named ${this.name}`;
+            }
+        }
+    </script>
+</body>
+
+</html>

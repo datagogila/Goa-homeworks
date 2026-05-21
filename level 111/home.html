@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // object - ობიექტი შეიცავს როგორს: ფერი, მოდელი და ასევე შეიძლება ჰქონდეს ფუნქციებიც
+
+        let car = {
+            color: "red",
+            model: "Bmw",
+            seats: "4",
+            noise: console.log("buduuuuuuuuuuuuuuu")
+        }
+
+        car.noise
+
+
+        // callback - ნიშნავს როდესაც ფუნქციის არგუმენტად გადავცემთ ფუნქცია მას:
+        function callback() {
+            console.log(callback)
+        }
+
+
+
+        // function - ის შექმნა 3 ნაირად შეიძლება:
+
+        //Function Declaration
+        let function1 = function (username) {
+            console.log("hello ", username)
+        }
+        //Function Expression
+        function function2(username) {
+            console.log("hello ", username)
+        }
+        //arrow functon
+        let function3 = (username) => {
+            console.log("hello ", username)
+        }
+    </script>
+</body>
+
+</html>

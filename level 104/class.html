@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>Input Message Example</title>
+<style>
+  body {
+    font-family: cursive;
+    padding: 20px;
+  }
+
+  #message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  #message.show {
+    opacity: 1;
+  }
+</style>
+</head>
+<body>
+
+<input type="text" id="button" placeholder="დაწერე ტექსტი...">
+<button id="submitBtn">Submit</button>
+
+<div id="message"></div>
+
+<script>
+let button = document.getElementById("button")
+let message = document.getElementById("submitBtn")
+
+button.addEventListener("click", () => {
+    message.style.transform = "translate(0px)"
+    setTimeout(() => {
+        message.style.transform = "translate(365px)"
+    }, 3000)
+})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        function addLength(str) {
+            let split = str.split(" ");
+            let result = [];
+
+            for (i = 0; i < split.length; ++i) {
+                result.push(split[i] + " " + split[i].length);
+            }
+            return result;
+        }
+
+        //2
+        function invert(array) {
+            return array.map(x => -x)
+        }
+
+        //3
+        //ver gavigeeee
+
+        //4
+        function squareSum(numbers) {
+            let totalSum = 0;
+            for (i = 0; i < numbers.length; i++) {
+                totalSum += Math.pow(numbers[i], 2);
+            }
+            return totalSum;
+        }
+
+        //5
+        function positiveSum(arr) {
+            var total = 0;
+            for (i = 0; i < arr.length; i++) {
+                total += arr[i];
+                if (arr[i] > 0) {
+                }
+            }
+            return total;
+        }
+    </script>
+</body>
+
+</html>

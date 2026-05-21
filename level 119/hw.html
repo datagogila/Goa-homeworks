@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1
+        try {
+            const number = 10;
+            number = 20; 
+        } catch (error) {
+            console.log(error.message);
+        }
+
+        // 2
+        try {
+            JSON.parse("{name: 'nika'}");
+        } catch (error) {
+            console.log("Invalid JSON");
+        }
+
+        // 3
+        function divide(a, b) {
+            try {
+                if (b === 0) {
+                    throw new Error("Cannot divide by zero");
+                }
+
+                console.log(a / b);
+            } catch (error) {
+                console.log(error.message);
+            }
+        }
+        divide(10, 0);
+
+        // 4
+        try {
+            let obj = null;
+
+            console.log(obj.name);
+        } catch (error) {
+            console.log("Property error");
+        }
+        
+        // 5
+        try {
+            let arr = ["hello", "world"];
+
+            console.log(arr[5].toUpperCase());
+        } catch (error) {
+            console.log("Out of bounds or invalid operation");
+        }
+    </script>
+</body>
+
+</html>

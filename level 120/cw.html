@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        function getCount(str) {
+            let count = 0;
+            let vowels = "aeiou";
+
+            for (let char of str) {
+                if (vowels.includes(char)) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        //2
+        function solve(s) {
+            let lower = 0;
+            let upper = 0;
+            for (let char of s) {
+                if (char === char.toLowerCase()) {
+                    lower++;
+                } else {
+                    upper++;
+                }
+            }
+            if (lower >= upper) {
+                return s.toLowerCase();
+            } else {
+                return s.toUpperCase();
+            }
+        }
+
+        //3
+        function oddOrEven(array) {
+            let sum = array.reduce((acc, num) => acc + num, 0);
+            return sum % 2 === 0 ? "even" : "odd";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>documment</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(to right, #2b2b2b, #111);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            transition: 0.3s;
+        }
+
+        body.light {
+            background: linear-gradient(to right, #e6e6e6, #ffffff);
+            color: black;
+        }
+
+        .top {
+            width: 900px;
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        #mode {
+            padding: 12px 16px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input {
+            flex: 1;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+
+        #btn {
+            padding: 12px 16px;
+            border: none;
+            border-radius: 20px;
+            background: limegreen;
+            color: white;
+            cursor: pointer;
+        }
+
+        .card {
+            width: 900px;
+            background: #3f3f3f;
+            border-radius: 25px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        body.light .card {
+            background: white;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .left h1 {
+            font-size: 60px;
+        }
+
+        .left h2 {
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+        .left p {
+            margin-top: 8px;
+        }
+
+        .middle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #icon {
+            width: 160px;
+        }
+    
+        .right {
+            display: grid;
+            grid-template-columns: repeat(2, 140px);
+            gap: 15px;
+        }
+
+        .box {
+            background: #555;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+        
+        }
+
+        body.light .box {
+            background: #ececec;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="top">
+        <button id="mode">Dark / Light</button>
+        <input id="search" placeholder="Search city...">
+        <button id="btn">Search</button>
+    </div>
+
+    <div class="card">
+
+        <div class="content">
+
+            <div class="left">
+                <h1 id="temp">--</h1>
+                <h2 id="weather">--</h2>
+
+                <p>Feels Like: <span id="feels">--</span></p>
+                <p>Sunrise: <span id="sunrise">--</span></p>
+                <p>Sunset: <span id="sunset">--</span></p>
+            </div>
+
+            <div class="middle">
+                <img id="icon">
+            </div>
+
+            <div class="right">
+
+                <div class="box">
+                    <h3 id="humidity">--</h3>
+                    <p>Humidity</p>
+                </div>
+
+                <div class="box">
+                    <h3 id="wind">--</h3>
+                    <p>Wind</p>
+                </div>
+
+                <div class="box">
+                    <h3 id="pressure">--</h3>
+                    <p>Pressure</p>
+                </div>
+
+                <div class="box">
+                    <h3 id="uv">--</h3>
+                    <p>UV</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+
+        let btn = document.getElementById("btn");
+        let mode = document.getElementById("mode");
+
+        let tempEl = document.getElementById("temp");
+        let weatherEl = document.getElementById("weather");
+        let feelsEl = document.getElementById("feels");
+
+        let humidityEl = document.getElementById("humidity");
+        let windEl = document.getElementById("wind");
+        let pressureEl = document.getElementById("pressure");
+        let uvEl = document.getElementById("uv");
+
+        let iconEl = document.getElementById("icon");
+
+        async function getWeather() {
+
+            let city = document.getElementById("search").value;
+
+            const res = await fetch(
+                `https://api.weatherapi.com/v1/current.json?key=e04d7f72365344f7a58130023261305&q=${city}&aqi=yes`
+            );
+
+            const data = await res.json();
+
+            tempEl.textContent = data.current.temp_c + "°C";
+            weatherEl.textContent = data.current.condition.text;
+            feelsEl.textContent = data.current.feelslike_c + "°C";
+
+            humidityEl.textContent = data.current.humidity + "%";
+            windEl.textContent = data.current.wind_kph + " km/h";
+            pressureEl.textContent = data.current.pressure_mb;
+            uvEl.textContent = data.current.uv;
+
+            iconEl.src = "https:" + data.current.condition.icon;
+
+        }
+
+        btn.addEventListener("click", getWeather);
+
+        mode.addEventListener("click", () => {
+            document.body.classList.toggle("light");
+        });
+
+    </script>
+</body>
+
+</html>

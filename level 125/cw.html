@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Range</title>
+</head>
+<body>
+
+  <input type="number" id="id1">
+  <input type="number" id="id2">
+  <button onclick="getData()">Submit</button>
+
+  <div id="container" style="display:flex; flex-wrap:wrap; gap:20px;"></div>
+
+<script>
+const container = document.getElementById("container");
+
+const createNewCard = (product) => {
+    let parentDiv = document.createElement("div");
+    parentDiv.style.width = "300px";
+    parentDiv.style.height = "400px"; 
+    parentDiv.style.border = "1px solid black";
+    parentDiv.style.padding = "15px";
+    parentDiv.style.display = "flex";
+    parentDiv.style.flexDirection = "column";
+    parentDiv.style.alignItems = "center";
+    parentDiv.style.gap = "10px";
+
+    let productImage = document.createElement("img");
+    productImage.src = product.images[0];
+    productImage.style.width = "200px";
+
+    let productTitle = document.createElement("h3");
+    productTitle.textContent = product.title;
+
+    let productDescription = document.createElement("p");
+
+
+    let productPrice = document.createElement("h2");
+    productPrice.textContent = "$" + product.price;
+
+    parentDiv.append(productImage, productTitle, productDescription, productPrice);
+
+    return parentDiv;
+}
+
+async function getData() {
+    let id1 = Number(document.getElementById("id1").value);
+    let id2 = Number(document.getElementById("id2").value);
+
+    let min = Math.min(id1, id2);
+    let max = Math.max(id1, id2);
+
+
+
+    let response = await fetch('https://api.escuelajs.co/api/v1/products/');
+    let data = await response.json();
+
+    let filtered = data.filter(item => item.id >= min && item.id <= max);
+
+    filtered = filtered.slice(5, 10);
+
+    if (filtered.length < 5) {
+        console.log("there isn't any product");
+        return;
+    }
+
+}
+</script>
+
+</body>
+</html>

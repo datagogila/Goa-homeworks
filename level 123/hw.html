@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1
+        const startPromise = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Start");
+            }, 1000);
+        });
+
+        const finishPromise = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Finish");
+            }, 2000);
+        });
+
+        startPromise
+            .then(result => {
+                console.log(result);
+
+                return finishPromise;
+            })
+            .then(result => {
+                console.log(result);
+            });
+
+        // 2
+        const numberPromise = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(5);
+            }, 2000);
+        });
+
+        numberPromise
+            .then(num => {
+                return num * 2;
+            })
+            .then(num => {
+                return num + 10;
+            })
+            .then(result => {
+                console.log(result);
+            });
+
+        // 3
+        const promiseOne = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("One");
+            }, 4000);
+        });
+
+        const promiseTwo = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Two");
+            }, 2000);
+        });
+
+        const promiseThree = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Three");
+            }, 3000);
+        });
+
+        Promise.race([promiseOne, promiseTwo, promiseThree])
+            .then(result => {
+                console.log(result);
+            });
+
+        // 4
+        const loadPromise = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Loaded!");
+            }, 3000);
+        });
+
+        loadPromise.then(result => {
+            console.log(result);
+        });
+
+        // 5
+        const step1 = new Promise((resolve) => {
+            resolve("Step 1");
+        });
+
+        const step2 = new Promise((resolve) => {
+            resolve("Step 2");
+        });
+        step1
+            .then(result => {
+                console.log(result);
+
+                return step2;
+            })
+            .then(result => {
+                console.log(result);
+            });
+    </script>
+</body>
+
+</html>

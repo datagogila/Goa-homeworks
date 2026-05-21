@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //spread
+        //1
+        let arr = [1, 2, 3, 4];
+        let arr1 = arr;
+        arr1.push(5);
+        console.log(arr);
+        console.log(arr1);
+
+        //2
+        let arr2 = [1, 2, 3, 4];
+        let arr3 = [...arr2, 5];
+
+        arr2.push(6);
+        console.log(arr2);
+        console.log(arr3);
+
+        //3
+        let budu1 = {
+            name: "Nika"
+        };
+        let budu2 = budu1;
+
+        budu2.age = 25;
+        console.log(budu1);
+        console.log(budu2);
+
+        //4
+        let budu3 = {
+            name: "Nika"
+        };
+        let budu4 = {
+            ...budu3,
+            age: 25
+        };
+        console.log(budu3);
+        console.log(budu4);
+
+        //5
+        let gg = [1, 2, 3, 4, 5, 6];
+        let gg1 = [...arr1, 7, 8, 9];
+
+        console.log(gg);
+        console.log(gg1);
+
+        //rest
+        //1
+        let arr4 = [1, 2, 3, 4, 5, 6, 7];
+        let [first, second, ...rest] = arr4
+
+        console.log(first, second, rest);
+
+        //2
+        let adamiani = {
+            name: "data",
+            age: 12,
+            city: "tbilisi"
+        };
+
+        let { name, ...restObj } = adamiani;
+        console.log(name);
+        console.log(restObj);
+
+        //3
+        function daprintericxvebi(...numbers) {
+            console.log(numbers);
+        }
+        daprintericxvebi(1, 2, 3, 4, 5);
+
+        //4
+        function gaamravlericxvebi(...numbers) {
+            console.log(numbers);
+            let = numbers.reduce((a, b) => a * b, 1);
+            return result;
+        }
+        console.log(gaamravlericxvebi(2, 3, 4, 3));
+
+        //5
+        function adamiani2(obj) {
+            let { name, ...restObj } = obj;
+            console.log(name);
+            console.log(restObj);
+        }
+        adamiani2({
+            name: "elene",
+            age: 13,
+            city: "tbilisi"
+        });
+    </script>
+</body>
+
+</html>
